@@ -1,0 +1,12 @@
+.tienda{
+    
+        background-image: url(../media/Tienda/fondo-tienda.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: unset;
+    
+}
+
+p,h1{
+    text-align: center;
+}
