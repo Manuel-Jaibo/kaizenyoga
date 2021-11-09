@@ -1,0 +1,5 @@
+colores:
+morado 1: #564693
+morado 2: #8E4091
+
+tipografía: Poppins

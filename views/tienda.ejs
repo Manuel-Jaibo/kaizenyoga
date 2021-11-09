@@ -6,13 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaizen</title>
     <!-- Enlace para CSS  -->
+    <link rel="stylesheet" href="../css/cssGeneral.css" />
   <link rel="stylesheet" href="../css/cssTienda.css" />
+
+  <!-- Compiled and minified CSS para Materialieze-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  
 </head>
 <body class="tienda">
-    <h1>Tienda</h1>
 
-<p>Todos los artículos</p> <!--Todos los artículos que tengan la etiqueta 'todos'. CLa colección en Shopify se llama: todos-->
-<div id='collection-component-1636421003156'></div>
+<h1>Todos los artículos</h1> <!--Todos los artículos que tengan la etiqueta 'todos'. CLa colección en Shopify se llama: todos-->
+
+
+
+
+
+
+
+<div id='collection-component-1636430497870'></div>
+<div id="myresult" class="img-zoom-result"></div>
 <script type="text/javascript">
 /*<![CDATA[*/
 (function () {
@@ -41,7 +54,7 @@
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
         id: '384059277568',
-        node: document.getElementById('collection-component-1636421003156'),
+        node: document.getElementById('collection-component-1636430497870'),
         moneyFormat: '%24%20%7B%7Bamount%7D%7D',
         options: {
   "product": {
@@ -60,14 +73,15 @@
       "options": false
     },
     "text": {
-      "button": "Abrir Características"
+      "button": "Características y Modelos"
     }
   },
   "productSet": {
     "styles": {
       "products": {
         "@media (min-width: 601px)": {
-          "margin-left": "-20px"
+          "margin-left": "-20px",
+          // "background-color": "red"
         }
       }
     }
@@ -79,17 +93,23 @@
       "button": false,
       "buttonWithQuantity": true
     },
+
     "styles": {
+      "img": {
+        "display": "block",
+        "margin": "auto"
+      },
+
       "product": {
         "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
+          "width": "100%",
+          // "background-color": "green",
         }
       }
     },
+
     "text": {
-      "button": "Add to cart"
+      "button": "Añadir al carrito"
     }
   },
   "option": {},
@@ -107,5 +127,102 @@
 })();
 /*]]>*/
 </script>
+
+
+
+<div class="img-zoom-container">
+  <img id="myimage" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" width="500" height="240" alt="">
+  
+</div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+
+  /* Create lens: */
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+
+  /* Insert lens: */
+  img.parentElement.insertBefore(lens, img);
+
+  /* Calculate the ratio between result DIV and lens: */
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+
+  /* Set background properties for the result DIV */
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+
+  /* Execute a function when someone moves the cursor over the image, or the lens: */
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  
+  /* And also for touch screens: */
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /* Prevent any other actions that may occur when moving over the image */
+    e.preventDefault();
+    /* Get the cursor's x and y positions: */
+    pos = getCursorPos(e);
+    /* Calculate the position of the lens: */
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /* Prevent the lens from being positioned outside the image: */
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /* Set the position of the lens: */
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /* Display what the lens "sees": */
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /* Get the x and y positions of the image: */
+    a = img.getBoundingClientRect();
+    /* Calculate the cursor's x and y coordinates, relative to the image: */
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /* Consider any page scrolling: */
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+
+
+
+
+<script>
+  imageZoom("myimage", "myresult");
+  </script>
+
+
+
+
+
+
+
+
+<!-- Compiled and minified JavaScript para Materialize-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
