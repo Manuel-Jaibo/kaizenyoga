@@ -11,21 +11,36 @@ p,h1{
     text-align: center;
 }
 
-.img-zoom-container {
-    position: relative;
-  }
-  
-  .img-zoom-lens {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    /*set the size of the lens:*/
-    width: 200px;
-    height: 50px;
-  }
-  
-  .img-zoom-result {
-    border: 1px solid #d4d4d4;
-    /*set the size of the result div:*/
-    width: 400px;
-    height: 100px;
-  }
+
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 700px;
+  margin: 25px;
+}
+
+.image img {
+  width: 100%;
+}
+
+.loupe {
+  display: none;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 12px black;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.loupe img {
+  position: absolute;
+  right: 0;
+}
+

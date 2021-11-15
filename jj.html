@@ -4,33 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaizen</title>
+    <title>Kaizen Yoga | 2021</title>
     <!-- Enlace para CSS  -->
     <link rel="stylesheet" href="../css/cssGeneral.css" />
   <link rel="stylesheet" href="../css/cssTienda.css" />
 
+  <!-- Compiled and minified CSS para Materialieze-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-
-  <!-- Enlace a Jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
 </head>
-
-
 <body class="tienda">
 
 <h1>Todos los artículos</h1> <!--Todos los artículos que tengan la etiqueta 'todos'. CLa colección en Shopify se llama: todos-->
 
-<div class="container">
-  <div class="image">
-    <img src="/media/joe.jpg">
-  </div>
-  <div class="image">
-    <img src="/media/joe.jpg">
-  </div>
-
-  <div class="image" id='product-component-1636599353196'></div>
 
 
+
+
+
+
+<div id='collection-component-1636430497870'></div>
+<div id="myresult" class="img-zoom-result"></div>
 <script type="text/javascript">
 /*<![CDATA[*/
 (function () {
@@ -57,34 +52,41 @@
       storefrontAccessToken: '390e5b4b15d1ce6db5a71e49889094d9',
     });
     ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('product', {
-        id: '7437047169280',
-        node: document.getElementById('product-component-1636599353196'),
+      ui.createComponent('collection', {
+        id: '384059277568',
+        node: document.getElementById('collection-component-1636430497870'),
         moneyFormat: '%24%20%7B%7Bamount%7D%7D',
         options: {
   "product": {
     "styles": {
+      "img":{
+        "width": "5000px !important",
+      },
+
       "product": {
+        "background-color": "red",
         "@media (min-width: 601px)": {
           "max-width": "calc(25% - 20px)",
           "margin-left": "20px",
-          "margin-bottom": "50px"
+          "margin-bottom": "50px",
+          "width": "calc(25% - 20px)"
         }
       }
     },
     "buttonDestination": "modal",
     "contents": {
-      "options": false
+      "options": true
     },
     "text": {
-      "button": "View product"
+      "button": "Características y Modelos"
     }
   },
   "productSet": {
     "styles": {
       "products": {
         "@media (min-width: 601px)": {
-          "margin-left": "-20px"
+          "margin-left": "-20px",
+          // "background-color": "red"
         }
       }
     }
@@ -96,17 +98,33 @@
       "button": false,
       "buttonWithQuantity": true
     },
+
+
+
+
+
+    
     "styles": {
+      "img": {
+        "display": "block",
+        "margin": "auto",
+      },
+
+      "img:hover": {
+        "width": "500px"
+      },
+        
+
       "product": {
         "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
+          "width": "100%",
+          // "background-color": "green",
         }
       }
     },
+
     "text": {
-      "button": "Add to cart"
+      "button": "Añadir al carrito"
     }
   },
   "option": {},
@@ -124,12 +142,15 @@
 })();
 /*]]>*/
 </script>
+
+
+
+
+
+<div class="div">
+  <h1>hole</h1>
+  <img src="https://www.tuexperto.com/wp-content/uploads/2017/10/fondo-de-pantalla-paisaje.jpg" >
 </div>
-<div class="loupe"></div>
-
-
-<!-- Script para efecto de lupa -->
-<script src="/scripts/zoom.js"></script>
 
 
 
@@ -137,11 +158,48 @@
 
 
 
-
-
-
-
-
-
+<!-- Compiled and minified JavaScript para Materialize-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+//CSS
+
+.tienda {
+    background-image: url(../media/Tienda/fondo-tienda.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: unset;
+  }
+  
+  .div{
+    width: 900px;
+    height: 550px;
+    overflow: hidden;
+    margin: 20px;
+  }
+  
+  .div img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    object-fit: cover;
+  }
+  
+  .div img:hover{t
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+  }
