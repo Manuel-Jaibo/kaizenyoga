@@ -1,3 +1,7 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -30,12 +34,12 @@ body h5{
 }
 
 body p{
-    font-size: 50px;
+    font-size: 26px;
     color: #000000;
 }
 
-body a{
-    font-size: 20px;
+body a, body li{
+    font-size: 19px;
     text-decoration: none;
     color: #000000;
 }
