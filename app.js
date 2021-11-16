@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const stripe = require('stripe')('pk_test_51Jpi6GEBbCGH38EQuBbofqK9g30Jocv8AQg9gSWHgvMauKZkzb7dmMgHqPebOtFhwrDYVZO7b4Dz4EwVYH9GFRPN00NVro1Jht');
+const stripe = require('stripe')('pk_live_51Jpi6GEBbCGH38EQ6aTR8ITUW0FWwYTS7oEQGvKiXESHD4dS45W10YxNN9Xkrq2kwfe8iPyh9Vpb5tiG7koBeYbd00HOomo7eP');
 const nodemailer = require('nodemailer');
  
 

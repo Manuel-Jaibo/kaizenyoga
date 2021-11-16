@@ -1,24 +1,50 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaizen</title>
-    <!-- Inicia enlace para CSS  -->
-    <link rel="stylesheet" href="../css/cssGeneral.css" />
-    <!-- Fin enlace para CSS  -->
-    
-    <!--Inicia enlace para tipografía-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!--Fin enlace para tipografía-->
+
+    <!-- Inicia enlace para CSS Index -->
+    <link rel="stylesheet" href="../css/cssHome.css" />
+    <!-- Inicia enlace para CSS Index -->
+
+    <%- include('./template/head.ejs') %>
+
 
 </head>
+
 <body>
-    <h1>Estamos en construcción</h1>
+
+    <%- include('./template/barraSuperior.ejs') %>
+
+<header>
+    <%- include('./template/header.ejs') %>
+</header>
+
+<div class="bannerHome">
+    <img src="./media/Inicio/bannerInicio.png" alt="">
+</div>
+
+<section>
+    <h1>Lleva tu práctica de yoga o meditación a otro nivel con Kaizen Yoga</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic recusandae. Molestias tempora necessitatibus, minus quisquam, sit ullam unde officiis nostrum repudiandae ea accusamus alias amet nesciunt numquam. Aliquam, exercitationem?</p>
+</section>
+
+
+
+    <footer>
+        <div>Contacto</div>
+        <div>Redes</div>
+        <div>Métodos de pago</div>
+    </footer>
 
 
 </body>
+
 </html>
