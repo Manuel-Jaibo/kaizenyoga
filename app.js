@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const stripe = require('stripe')('pk_live_51Jpi6GEBbCGH38EQ6aTR8ITUW0FWwYTS7oEQGvKiXESHD4dS45W10YxNN9Xkrq2kwfe8iPyh9Vpb5tiG7koBeYbd00HOomo7eP');
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
  
 
 // Configuraciones express
@@ -22,10 +22,12 @@ app.set('views', __dirname + '/views');
 
 //Se importan Routes
 // const rutaSend = require('./routes/send');
-// const rutaCheckout = require('./routes/checkout');
+// const rutaCheckout = require('/routes/checkout');
+// var checkRutas = require('./check');
 
 //MIDDLEWARE
 // app.get('/checkout', rutaCheckout);
+// app.get('/check', checkRutas);
 
 
 // Rutas Renderizadas con EngineJs
