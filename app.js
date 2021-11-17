@@ -23,11 +23,12 @@ app.set('views', __dirname + '/views');
 //Se importan Routes
 // const rutaSend = require('./routes/send');
 // const rutaCheckout = require('/routes/checkout');
-// var checkRutas = require('./check');
+const checksRutas = require('./routes/check');
+
 
 //MIDDLEWARE
 // app.get('/checkout', rutaCheckout);
-// app.get('/check', checkRutas);
+app.use('/check', checksRutas);
 
 
 // Rutas Renderizadas con EngineJs
