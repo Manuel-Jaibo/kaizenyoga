@@ -73,7 +73,7 @@
       ui.createComponent('collection', {
         id: '263317422218',
         node: document.getElementById('collection-component-1637023854207'),
-        moneyFormat: '{{amount}} MXN',
+        moneyFormat: '%24%20%7B%7Bamount%7D%7D',
         options: {
   "product": {
     "styles": {
@@ -92,7 +92,7 @@
       "options": true
     },
     "text": {
-      "button": "Ver modelos"
+      "button": "Características"
     }
   },
   "productSet": {
@@ -128,7 +128,7 @@
   "cart": {
     "text": {
       "total": "Subtotal",
-      "button": "Comprar"
+      "button": "Checkout"
     }
   },
   "toggle": {}
@@ -166,11 +166,7 @@
     </div>
   </div>
 
-  <footer>
-    <div>Contacto</div>
-    <div>Redes</div>
-    <div>Métodos de pago</div>
-</footer>
+
 
 
 
