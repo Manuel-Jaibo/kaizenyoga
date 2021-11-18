@@ -1,13 +1,10 @@
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kaizen</title>
 
     <!-- Inicia enlace para CSS Index -->
@@ -15,39 +12,105 @@
     <!-- Inicia enlace para CSS Index -->
 
     <%- include('./template/head.ejs') %>
-
-
 </head>
 
 <body>
-
     <%- include('./template/barraSuperior.ejs') %>
 
-<header>
-    <%- include('./template/header.ejs') %>
-</header>
+        <header>
+            <%- include('./template/header.ejs') %>
+        </header>
 
-<div class="bannerHome">
-    <img src="./media/Inicio/bannerInicio.png" alt="">
-</div>
+        <div class="bannerHome">
+            <img src="./media/Inicio/bannerInicio.png" alt="" />
+        </div>
 
-<section>
-    <h1>Lleva tu práctica de yoga o meditación a otro nivel con Kaizen Yoga</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic recusandae. Molestias tempora necessitatibus, minus quisquam, sit ullam unde officiis nostrum repudiandae ea accusamus alias amet nesciunt numquam. Aliquam, exercitationem?</p>
-</section>
+        <section class="sectionHome">
+            <div>
+                <h1>
+                    Lleva tu práctica de yoga o meditación a otro nivel con Kaizen Yoga
+                </h1>
+                <p class="sectionHomePUno">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic
+                    recusandae. Molestias tempora necessitatibus, minus quisquam, sit
+                    ullam unde officiis nostrum repudiandae ea accusamus alias amet
+                    nesciunt numquam. Aliquam, exercitationem?
+                </p>
 
+                <div>
+                    <div class="sectionHomeDivUno">
+                        <div>
+                            <img loading="lazy" src="../media/Inicio/yogaUno.png" width="450px" alt="" />
+                            <h2>Yoga</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                                praesentium laboriosam necessitatibus quaerat corrupti consectetur
+                                maxime quasi ipsam dolore distinctio quidem reiciendis, deleniti
+                                fugiat, maiores culpa eveniet. Qui, nulla earum?
+                            </p>
+                        </div>
 
+                        <div>
+                            <img loading="lazy" src="../media/Inicio/yogaDos.png" width="450px" alt="" />
+                            <h2>Meditación</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dicta
+                                nulla earum. Est, ut! Dolorum, sapiente? Totam suscipit voluptates
+                                at quaerat! Qui vero, corporis ut eos possimus ab delectus
+                                numquam.
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="sectionHomeDivDos">
+                        <div>
+                            <img loading="lazy" src="../media/Inicio/yogaTres.png" width="450px" alt="" />
+                            <h2>Principiantes</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dicta
+                                nulla earum. Est, ut! Dolorum, sapiente? Totam suscipit voluptates
+                                at quaerat! Qui vero, corporis ut eos possimus ab delectus
+                                numquam.
+                            </p>
+                        </div>
 
+                        <div>
+                            <img loading="lazy" src="../media/Inicio/yogaCuatro.png" width="450px" alt="" />
+                            <h2>Avanzados</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dicta
+                                nulla earum. Est, ut! Dolorum, sapiente? Totam suscipit voluptates
+                                at quaerat! Qui vero, corporis ut eos possimus ab delectus
+                                numquam.
+                            </p>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <div>Contacto</div>
-        <div>Redes</div>
-        <div>Métodos de pago</div>
-    </footer>
+        <section class="sectionHomeDos">
+            <div class="divHomeDos">
+                <div class="divHomeDosA">
+                    <p>¿Aún no sabes qué estilo de cojín escoger?</p>
+                    <button>Nosotros de ayudamos</button>
+                </div>
 
+                <div class="divHomeDosB">
+                    <img loading="lazy" src="../media/Inicio/contactoHome.png" width="400px" alt="">
+                </div>
+            </div>
 
+            <h4>"Si buscas la paz, quédate quieto, si buscas sabiduría, guarda silencio, si buscas amor, sé tú mismo."
+                -Becca Lee</h4>
+        </section>
+
+        <footer>
+            <div>Contacto</div>
+            <div>Redes</div>
+            <div>Métodos de pago</div>
+        </footer>
 </body>
 
 </html>

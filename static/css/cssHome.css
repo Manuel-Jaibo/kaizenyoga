@@ -10,7 +10,70 @@
     object-fit:fill;
 }
 
-section{
-    width: 100%;
+.sectionHome h1{
+    padding: 70px 170px 20px 170px;
+    color: #564693;
+}
+
+.sectionHome h2{
+    margin-top: 15px;
+    color: #564693;
+}
+
+.sectionHome{
     text-align: center;
+    background-image: url("/static/media/Inicio/fondoInicio.png");
+    background-repeat: no-repeat;
+    background-position: contain;
+}
+
+.sectionHome p{
+    color: #8E4091;
+}
+
+.sectionHomePUno{
+    padding: 0 150px 100px 150px;
+}
+
+.sectionHomeDiv{
+    display: flex;
+    width: 100%;
+}
+
+.sectionHomeDos{
+    width: 100%;
+}
+
+.divHomeDos{
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+}
+
+.divHomeDos div{
+    width: 50%;
+}
+
+.divHomeDosA{
+    display: block;
+    margin: auto;
+}
+
+.divHomeDosB{
+    display: block;
+    margin: auto;
+}
+
+.sectionHomeDivUno{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sectionHomeDivDos{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
