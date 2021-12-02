@@ -1,0 +1,111 @@
+/*<![CDATA[*/
+    (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+          if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+          } else {
+            loadScript();
+          }
+        } else {
+          loadScript();
+        }
+        function loadScript() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = scriptURL;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+          script.onload = ShopifyBuyInit;
+        }
+        function ShopifyBuyInit() {
+          var client = ShopifyBuy.buildClient({
+            domain: 'kaizencuatro.myshopify.com',
+            storefrontAccessToken: '4164ed056729419d3e24bb720d01c9a4',
+          });
+          ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('collection', {
+              id: '263317422218',
+              node: document.getElementById('collection-component-1638330693873'),
+              moneyFormat: '%24%20%7B%7Bamount%7D%7D',
+              options: {
+        "product": {
+          "styles": {
+            "product": {
+              "@media (min-width: 601px)": {
+                "max-width": "1000px",
+                "margin-left": "20px",
+                "margin-bottom": "10px",
+                "width": "300px"
+              }
+            }
+          },
+          "buttonDestination": "modal",
+          "contents": {
+            "options": false
+          },
+          "text": {
+            "button": "Características"
+          }
+        },
+        "productSet": {
+          "styles": {
+            "products": {
+              "@media (min-width: 601px)": {
+                "margin-left": "-20px",
+                // "background-color": "blue"
+              }
+            }
+          }
+        },
+        "modalProduct": {
+          "contents": {
+            "img": true,
+            "imgWithCarousel": false,
+            "variantTitle": true,
+            "buttonWithQuantity": true,
+            "button": false,
+            "quantity": true,
+            "options": true,
+            
+
+
+//             img: true,
+//   title: true,
+//   variantTitle: false,
+//   price: true,
+//   options: true,
+//   quantity: false, // determines whether to show any quantity inputs at all
+//   quantityIncrement: false, // button to increase quantity
+//   quantityDecrement: false, // button to decrease quantity
+          },
+          "styles": {
+            "img": {
+            //     "display": "none"
+            },
+            "product": {
+              "background-color": "red", //pop del producto abierto
+              "@media (min-width: 601px)": {
+                "max-width": "100%",
+                "margin-left": "0px",
+                "margin-bottom": "0px",
+              }
+            }
+          },
+          "text": {
+            "button": "Añadir al carrito"
+          }
+        },
+        "option": {},
+        "cart": {
+          "text": {
+            "total": "Subtotal",
+            "button": "Comprar"
+          }
+        },
+        "toggle": {}
+      },
+            });
+          });
+        }
+      })();
+      /*]]>*/

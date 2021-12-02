@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kaizen</title>
-  
-  <!-- Inicia enlace para CSS Index -->
-  <link rel="stylesheet" href="../css/cssTienda.css" />
-  <!-- Inicia enlace para CSS Index -->
-
-  <%- include('./template/head.ejs') %>
-
-  
-
-<body class="tienda">
-
-  <%- include('./template/barraSuperior.ejs') %>
-
-<header>
-    <%- include('./template/header.ejs') %>
-</header>
-
-  <nav class="navColecciones">
-    <!--Menú de las colecciones-->
-
-    <ul>
-      <button id="textoColeccionTodos" onclick="botonColeccionTodos()">
-        <li>Colección Todos</li>
-      </button>
-
-      <button id="botonColeccionUno" onclick="botonColeccionUno()">
-        <li>Colección Uno</li>
-      </button>
-
-      <button id="botonColeccionDos" onclick="botonColeccionDos()">
-        <li>Colección Dos</li>
-      </button>
-
-    </ul>
-  </nav>
-
-  <div class="mosaicoColecciones">
-    <div id="contenidoTodos">
-      <div id='collection-component-1637023854207'></div>
+<div id='collection-component-1637023854207'></div>
 <script type="text/javascript">
 /*<![CDATA[*/
 (function () {
@@ -73,7 +28,7 @@
       ui.createComponent('collection', {
         id: '263317422218',
         node: document.getElementById('collection-component-1637023854207'),
-        moneyFormat: '%24%20%7B%7Bamount%7D%7D',
+        moneyFormat: '{{amount}} MXN',
         options: {
   "product": {
     "styles": {
@@ -92,7 +47,7 @@
       "options": true
     },
     "text": {
-      "button": "Características"
+      "button": "Ver modelos"
     }
   },
   "productSet": {
@@ -128,7 +83,7 @@
   "cart": {
     "text": {
       "total": "Subtotal",
-      "button": "Checkout"
+      "button": "Comprar"
     }
   },
   "toggle": {}
@@ -149,33 +104,3 @@
 
  -->
 
-
-
-
-
-
-
-    </div>
-
-    <div id="contenidoUno" style="display: none;">
-      <h3>Soy el contenidoUno</h3>
-    </div>
-
-    <div id="contenidoDos" style="display: none;">
-      <h3>Soy el contenidoDos</h3>
-    </div>
-  </div>
-
-
-
-
-
-  <!-- Script para efecto de navegación Colección -->
-  <script src="./scripts/parrafoTienda.js"></script>
-
-
-
-
-</body>
-
-</html>

@@ -10,21 +10,25 @@
   <link rel="stylesheet" href="../css/cssTienda.css" />
   <!-- Inicia enlace para CSS Index -->
 
+  <!-- Inicia Head-->
   <%- include('./template/head.ejs') %>
-
+  <!-- Fin Head-->
   
 
 <body class="tienda">
 
+  <!-- Inicia Barra superior-->
   <%- include('./template/barraSuperior.ejs') %>
+  <!-- Fin Barra superior-->
 
 <header>
+  <!-- Inicia header-->
     <%- include('./template/header.ejs') %>
+    <!-- Fin header-->
 </header>
 
+<!--Inicia Menú cambiable-->
   <nav class="navColecciones">
-    <!--Menú de las colecciones-->
-
     <ul>
       <button id="textoColeccionTodos" onclick="botonColeccionTodos()">
         <li>Colección Todos</li>
@@ -37,124 +41,14 @@
       <button id="botonColeccionDos" onclick="botonColeccionDos()">
         <li>Colección Dos</li>
       </button>
-
     </ul>
   </nav>
+<!--Fin Menú cambiable-->
 
   <div class="mosaicoColecciones">
     <div id="contenidoTodos">
-      <div id='collection-component-1637023854207'></div>
-<script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'kaizencuatro.myshopify.com',
-      storefrontAccessToken: '4164ed056729419d3e24bb720d01c9a4',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: '263317422218',
-        node: document.getElementById('collection-component-1637023854207'),
-        moneyFormat: '{{amount}} MXN',
-        options: {
-  "product": {
-    "styles": {
-
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px",
-          "width": "calc(25% - 20px)"
-        }
-      }
-    },
-    "buttonDestination": "modal",
-    "contents": {
-      "options": true
-    },
-    "text": {
-      "button": "Ver modelos"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      }
-    },
-    "text": {
-      "button": "Añadir al carrito"
-    }
-  },
-  "option": {},
-  "cart": {
-    "text": {
-      "total": "Subtotal",
-      "button": "Comprar"
-    }
-  },
-  "toggle": {}
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-</script>
-
-
-
-<!-- 
-1. Se pondrán imágenes con el link de shopify y se colocarán en las colecciones con un botón que dirá Ver modelos.
-2. Cuando el usuario dé clic en el botón, se abrirá un popup con el artículo ya de código obtenido por shopify.
-3. Este artículo tendrá la opción de añadir al carrito.
-
- -->
-
-
-
-
-
-
-
+      <div id='collection-component-1638330693873'></div>
+      <script src="./scripts/shopifyCollecciones/todos.js" type="text/javascript"></script>
     </div>
 
     <div id="contenidoUno" style="display: none;">
