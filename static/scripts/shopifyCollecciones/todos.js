@@ -83,7 +83,7 @@
             //     "display": "none"
             },
             "product": {
-              "background-color": "red", //pop del producto abierto
+              "background-color": "transparent", //pop del producto abierto
               "@media (min-width: 601px)": {
                 "max-width": "100%",
                 "margin-left": "0px",
