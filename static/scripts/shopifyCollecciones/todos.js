@@ -66,21 +66,10 @@
             "button": false,
             "quantity": true,
             "options": true,
-            
-
-
-//             img: true,
-//   title: true,
-//   variantTitle: false,
-//   price: true,
-//   options: true,
-//   quantity: false, // determines whether to show any quantity inputs at all
-//   quantityIncrement: false, // button to increase quantity
-//   quantityDecrement: false, // button to decrease quantity
           },
           "styles": {
             "img": {
-            //     "display": "none"
+                "display": "none"
             },
             "product": {
               "background-color": "transparent", //pop del producto abierto
@@ -107,5 +96,6 @@
             });
           });
         }
-      })();
+      })()
+      ;
       /*]]>*/

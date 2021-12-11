@@ -4,77 +4,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kaizen</title>
-  
-  <!-- Inicia enlace para CSS Index -->
-  <link rel="stylesheet" href="../css/cssTienda.css" />
-  <!-- Inicia enlace para CSS Index -->
+  <title>Kaizen Yoga 2021</title>
 
-  <!-- Inicia Head-->
+  <!-- Inicia Head (CSS General, Tipografía y Fontawesoma para íconos)-->
   <%- include('./template/head.ejs') %>
-  <!-- Fin Head-->
-  
+    <!-- Fin Head (CSS General, Tipografía y Fontawesoma para íconos)-->
+
+    <!-- Inicia enlace para CSS Index -->
+    <link rel="stylesheet" href="../css/cssTienda.css" />
+    <!-- Inicia enlace para CSS Index -->
 
 <body class="tienda">
 
   <!-- Inicia Barra superior-->
   <%- include('./template/barraSuperior.ejs') %>
-  <!-- Fin Barra superior-->
+    <!-- Fin Barra superior-->
 
-<header>
-  <!-- Inicia header-->
-    <%- include('./template/header.ejs') %>
-    <!-- Fin header-->
-</header>
+    <header>
+      <!-- Inicia header-->
+      <%- include('./template/header.ejs') %>
+        <!-- Fin header-->
+    </header>
 
-<!--Inicia Menú cambiable-->
-  <nav class="navColecciones">
-    <ul>
-      <button id="textoColeccionTodos" onclick="botonColeccionTodos()">
-        <li>Colección Todos</li>
-      </button>
 
-      <button id="botonColeccionUno" onclick="botonColeccionUno()">
-        <li>Colección Uno</li>
-      </button>
+    <!--Inicia Menú cambiable-->
+    <nav class="navColecciones">
+      <ul>
+        <button id="textoColeccionTodos" onclick="botonColeccionTodos()">
+          <li>Colección Todos</li>
+        </button>
 
-      <button id="botonColeccionDos" onclick="botonColeccionDos()">
-        <li>Colección Dos</li>
-      </button>
-    </ul>
-  </nav>
-<!--Fin Menú cambiable-->
+        <button id="botonColeccionUno" onclick="botonColeccionUno()">
+          <li>Colección Uno</li>
+        </button>
 
-  <div class="mosaicoColecciones">
-<!-- Colección Todos desde Shopify -->
-    <div id="contenidoTodos">
-      <div id='collection-component-1638330693873'></div>
-      <script src="./scripts/shopifyCollecciones/todos.js" type="text/javascript"></script>
+        <button id="botonColeccionDos" onclick="botonColeccionDos()">
+          <li>Colección Dos</li>
+        </button>
+      </ul>
+    </nav>
+    <!--Fin Menú cambiable-->
+
+    <div class="mosaicoColecciones">
+      <div id="contenidoTodos">
+        <!-- Inicia Aro para Pilates-->
+        <%- include('./template/productos/aroParaPilates/aroParaPilates.ejs') %>
+          <!--Fin Aro para Pilates-->
+      </div>
+
+      <div id="contenidoUno" style="display: none">
+        <h3>Soy el id=contenidoUno para artículos de PILATESS</h3>
+      </div>
+
+      <div id="contenidoDos" style="display: none">
+        <h3>Soy el id=contenidoDos para artículos de YOGA</h3>
+      </div>
     </div>
 
-<!-- Colección 'Yoga' desde Shopify -->
-    <div id="contenidoUno" style="display: none;">
-      <h3>Soy el contenidoUno</h3>
+    <footer>
+      <div>Contacto</div>
+      <div>Redes</div>
+      <div>Métodos de pago</div>
+    </footer>
+
+
+
+
+
+<!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <%- include('./template/productos/aroParaPilates/PopUpAroParaPilates.ejs') %>
+      </div>
     </div>
 
-<!-- Colección 'Meditación' desde Shopify -->
-    <div id="contenidoDos" style="display: none;">
-      <h3>Soy el contenidoDos</h3>
-    </div>
-  </div>
-
-  <footer>
-    <div>Contacto</div>
-    <div>Redes</div>
-    <div>Métodos de pago</div>
-</footer>
 
 
+<!-- Inicia Efecto para mostrar MODAL/POPUP -->
+    <script type="text/javascript">
+      // Get the modal
+      var modal = document.getElementById("myModal");
 
-  <!-- Script para efecto de navegación Colección -->
-  <script src="./scripts/parrafoTienda.js"></script>
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+<!-- Fin Efecto para mostrar MODAL/POPUP -->
 
 
+
+
+
+
+    <!-- Script para efecto de navegación Colección -->
+    <script src="./scripts/parrafoTienda.js"></script>
 
 
 </body>

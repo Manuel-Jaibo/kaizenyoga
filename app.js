@@ -20,12 +20,14 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 
+
 //Se importan Routes
-// const checksRutas = require('./routes/check');
+const rutaTienda = require('./routes/tienda');
 
 
 //MIDDLEWARE
-// app.use('/check', checksRutas);
+app.use('/tienda', rutaTienda);
+
 
 
 // Rutas Renderizadas con EngineJs
@@ -33,9 +35,14 @@ app.get('/', (req, res) => {
       res.render("index")
 });
 
-app.get('/tienda', (req, res) => {
-    res.render("tienda")
-});
+// app.get('/tienda', (req, res) => {
+//     res.render("tienda")
+// });
+
+
+
+
+
 
 
 //Ruta para errores 404
