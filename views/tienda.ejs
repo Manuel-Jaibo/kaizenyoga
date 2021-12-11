@@ -36,6 +36,7 @@
 
         <button id="botonColeccionUno" onclick="botonColeccionUno()">
           <li>Colección Uno</li>
+          
         </button>
 
         <button id="botonColeccionDos" onclick="botonColeccionDos()">
@@ -45,19 +46,63 @@
     </nav>
     <!--Fin Menú cambiable-->
 
+
+
+    
+
+
+
+
+
+
     <div class="mosaicoColecciones">
       <div id="contenidoTodos">
-        <!-- Inicia Aro para Pilates-->
-        <%- include('./template/productos/aroParaPilates/aroParaPilates.ejs') %>
-          <!--Fin Aro para Pilates-->
+        <div style="border-style:solid; ">
+          <% for(i=0; i < aroParaYoga.length; i++) { %>
+            <h2>  <%=aroParaYoga[i].titulo%>  </h2>
+            <p>  <%=aroParaYoga[i].precio%>  </p>
+            <img>  <%=aroParaYoga[i].imagen%>  </img>
+            <h3>  <%=aroParaYoga[i].variantes%>  </h3>
+            <p>  <%=aroParaYoga[i].descripcion%>  </p>
+        <%  } %>
+</div>
+
+
+<div style="border-style:solid; ">
+        <% for(i=0; i < sopa1.length; i++) { %>
+          <img width="350px" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aroUno.jpg?v=1638330383"></img>
+          <h2 name=Título>  <%=sopa1[i].titulo%>  </h2>
+          <p>  <%=sopa1[i].precio%>  </p>
+          <button>Ver más modelos</button>
+      <%  } %>
+  </div>
       </div>
+
+
+
+
+
+
+
 
       <div id="contenidoUno" style="display: none">
         <h3>Soy el id=contenidoUno para artículos de PILATESS</h3>
+        <%- include('./template/productos/aroParaPilates/aroParaPilates.ejs') %>
       </div>
 
       <div id="contenidoDos" style="display: none">
         <h3>Soy el id=contenidoDos para artículos de YOGA</h3>
+        <table border="1">
+          <tr>
+            <th>titulo</th>
+            <th>precio</th>
+            <th>imagen</th>
+            <th>variantes</th>
+            <th>descripcion</th>
+            <th>botonAddToCar</th>
+          </tr>
+          
+        </table>
       </div>
     </div>
 

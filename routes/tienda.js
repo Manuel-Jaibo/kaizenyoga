@@ -1,3 +1,4 @@
+const { urlencoded } = require('express');
 const express = require('express');
 const route = express.Router();
 const app = express();
@@ -6,32 +7,54 @@ app.set('view engine', 'ejs');
 
 
 
-let articulos = [
+
+var arosParaYoga = [
     {
         colecciones: ['todos', 'pilates'],
         titulo: 'Aro para pilates',
-        precio: 1800,
-        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aroUno.jpg?v=1638330383',
+        precio: 100,
+        imagen: 'hol',
         variantes: ['rojo', 'azul', 'amarillo'],
         descripcion: 'estupendo y maravillosos aro para pilates, distintos tamaños que se ajustan a tu estilo y ambiente de meditación',
         botonAddToCar: 'd'
     },
 
     {
+        colecciones: ['todos', 'pilates'],
+        titulo: 'Aro para pilates Azul',
+        precio: 100,
+        imagen: 'hol',
+        variantes: ['rojo', 'azul', 'amarillo'],
+        descripcion: 'estupendo y maravillosos aro para pilates, distintos tamaños que se ajustan a tu estilo y ambiente de meditación',
+        botonAddToCar: 'd'
+    },
+];
+
+    // for(i=0; i < arosParaYoga.length; i++);
+    // let toditos = arosParaYoga[i].colecciones,
+    // if (toditos == todos) {
+    //     console.log(toditos)
+    // } else {
+    //     console.log('ni pepe')
+    // }
+
+
+var sopa = [
+    {
         colecciones: ['todos', 'yoga'],
-        titulo: 'Calcetines para yoga',
-        precio: 6800,
-        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aroUno.jpg?v=1638330383',
-        variantes: ['beige', 'azul', 'aguacate'],
-        descripcion: 'estupendo y maravillosos ',
-        botonAddToCar: 'z'
-    }
+        titulo: 'sopa',
+        precio: `${100}`,
+        imagen: 'hol',
+        variantes: ['rojo', 'azul', 'amarillo'],
+        descripcion: 'estupendo y maravillosos aro para pilates, distintos tamaños que se ajustan a tu estilo y ambiente de meditación',
+        botonAddToCar: 'd'
+    },
 ];
 
 
 route.get('/', function (req, res) {
     // const todos = 'aquí se mostrarán los artículos con la clase "todos" ';
-    res.render("tienda", { articulos });
+    res.render("tienda", {aroParaYoga: arosParaYoga, sopa1: sopa});
 }
 );
 
@@ -39,7 +62,8 @@ route.get('/', function (req, res) {
 
 
 route.get('/yoga', function (req, res) {
-    res.render("tienda", { articulosYoga })
+    // res.render("tienda", { articulos })
+    res.send('Estás en kaizenyoga.com.mx/tienda/yoga')
 });
 
 
