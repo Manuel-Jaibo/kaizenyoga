@@ -44,8 +44,7 @@ route.get('/', function (req, res) {
     res.render("tienda", 
     {arosParaPilates: arosParaPilates,
      bolsasParaYoga: bolsasParaYoga}
-    );
-}
+    );}
 );
 
 

@@ -56,35 +56,29 @@
             <img loading="lazy" src="<%=arosParaPilates[i].imagen%>" width="100%"> </img>
             <h2> <%=arosParaPilates[i].titulo%> </h2>
             <p>$ <%=arosParaPilates[i].precio%> mxn </p>
-            <button onclick="clicPop()" id="myBtn">Ver más modelos</button>
+            <button onclick="clicPop()" id="myBtn">Ver modelos</button>
             <% } %>
         </div>
 
 <!-- Bolsas para Yoga -->
-        <div class="padreArticulo">
-          <% for(i=0; i < bolsasParaYoga.length; i++) { %>
-            <img loading="lazy" src="<%=bolsasParaYoga[i].imagen%>" width="100%"> </img>
-            <h2> <%=bolsasParaYoga[i].titulo%> </h2>
-            <p>$ <%=bolsasParaYoga[i].precio%> mxn </p>
-            <button onclick="clicPop()" id="myBtn">Ver más modelos</button>
-            <% } %>
-        </div>
+        
 
         
 <!-- Artículo de prueba -->
-        <div class="padreArticulo">
+        <div class="padreArticulo" >
           <% for(i=0; i < arosParaPilates.length; i++) { %>
             <img loading="lazy" src="<%=arosParaPilates[i].imagen%>" width="100%"> </img>
             <h2> <%=arosParaPilates[i].titulo%> </h2>
             <p>$ <%=arosParaPilates[i].precio%> mxn </p>
-            <button onclick="clicPop()" id="myBtn">Ver más modelos</button>
+            <button onclick="clicPop()" id="myBtn">Ver modelos</button>
             <% } %>
         </div>
+
 
       </div>
 
       <div id="contenidoUno" style="display: none">
-        <h3>Soy el id=contenidoUno para artículos de PILATESS</h3>
+        <h3>Soy el id=contenidoUno para artículos de PILATES</h3>
       </div>
 
       <div id="contenidoDos" style="display: none">
@@ -101,25 +95,24 @@
 
 
 
-
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <%- include('./template/productos/aroParaPilates/PopUpAroParaPilates.ejs') %>
+        <%- include('./template/productos/aroParaPilates') %>
       </div>
     </div>
 
-
+<!-- Inicia Efecto para mostrar MODAL/POPUP -->
+<script src="./scripts/pop.js"></script>
+<!-- Fin Efecto para mostrar MODAL/POPUP -->
 
     <!-- Script para efecto de navegación Colección -->
     <script src="./scripts/parrafoTienda.js"></script>
 
-     <!-- Inicia Efecto para mostrar MODAL/POPUP -->
-     <script src="./scripts/pop.js"></script>
-     <!-- Fin Efecto para mostrar MODAL/POPUP -->
+     
 
 </body>
 
