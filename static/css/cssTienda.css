@@ -8,10 +8,14 @@ html h1 {
 }
 
 html h2{
-  font-size: 20px;
+  font-size: 23px;
 }
 
 html h3{
+  font-size: 18px;
+}
+
+html p{
   font-size: 18px;
 }
 
@@ -57,6 +61,29 @@ li {
 .mosaicoColecciones {
   width: 100%;
   padding: 3% 5%;
+}
+
+#contenidoTodos{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.padreArticulo{
+  border-style:none;
+  width: 300px;
+  box-shadow: 0px 0px 4px 1px #564693;
+}
+
+.padreArticulo *{
+  margin-bottom: 5px;
+}
+
+.padreArticulo button{
+  margin: 10px 0 20px 0;
+  border: none;
+  padding: 8px 15px;
+  box-shadow: 0px 0px 5px 2px #8E4091;
 }
 
 /* The Modal (background) */

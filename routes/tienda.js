@@ -7,29 +7,6 @@ app.set('view engine', 'ejs');
 
 
 
-
-var arosParaYoga = [
-    {
-        colecciones: ['todos', 'pilates'],
-        titulo: 'Aro para pilates',
-        precio: 100,
-        imagen: 'hol',
-        variantes: ['rojo', 'azul', 'amarillo'],
-        descripcion: 'estupendo y maravillosos aro para pilates, distintos tamaños que se ajustan a tu estilo y ambiente de meditación',
-        botonAddToCar: 'd'
-    },
-
-    {
-        colecciones: ['todos', 'pilates'],
-        titulo: 'Aro para pilates Azul',
-        precio: 100,
-        imagen: 'hol',
-        variantes: ['rojo', 'azul', 'amarillo'],
-        descripcion: 'estupendo y maravillosos aro para pilates, distintos tamaños que se ajustan a tu estilo y ambiente de meditación',
-        botonAddToCar: 'd'
-    },
-];
-
     // for(i=0; i < arosParaYoga.length; i++);
     // let toditos = arosParaYoga[i].colecciones,
     // if (toditos == todos) {
@@ -39,22 +16,35 @@ var arosParaYoga = [
     // }
 
 
-var sopa = [
+var arosParaPilates = [
+    {
+        colecciones: ['todos', 'pilates'],
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aroUno.jpg?v=1638330383',
+        titulo: 'Aros para pilates', 
+        precio: 100,
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero repellendus, eaque, amet at aut, voluptatum qui dignissimos voluptatem similique officia hic sequi expedita molestias illo dicta unde necessitatibus fugit.',
+        botonAddToCar: 'd',
+    },
+];
+
+var bolsasParaYoga = [
     {
         colecciones: ['todos', 'yoga'],
-        titulo: 'sopa',
-        precio: `${100}`,
-        imagen: 'hol',
-        variantes: ['rojo', 'azul', 'amarillo'],
-        descripcion: 'estupendo y maravillosos aro para pilates, distintos tamaños que se ajustan a tu estilo y ambiente de meditación',
-        botonAddToCar: 'd'
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/bolsa-para-yoga-dos.jpg?v=1639276551',
+        titulo: 'Bolsas para yoga', 
+        precio: 700,
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero repellendus, eaque, amet at aut, voluptatum qui dignissimos voluptatem similique officia hic sequi expedita molestias illo dicta unde necessitatibus fugit.',
+        botonAddToCar: 'd',
     },
 ];
 
 
 route.get('/', function (req, res) {
     // const todos = 'aquí se mostrarán los artículos con la clase "todos" ';
-    res.render("tienda", {aroParaYoga: arosParaYoga, sopa1: sopa});
+    res.render("tienda", 
+    {arosParaPilates: arosParaPilates,
+     bolsasParaYoga: bolsasParaYoga}
+    );
 }
 );
 

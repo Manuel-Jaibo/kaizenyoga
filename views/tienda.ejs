@@ -36,7 +36,7 @@
 
         <button id="botonColeccionUno" onclick="botonColeccionUno()">
           <li>Colección Uno</li>
-          
+
         </button>
 
         <button id="botonColeccionDos" onclick="botonColeccionDos()">
@@ -48,61 +48,47 @@
 
 
 
-    
-
-
-
-
-
-
     <div class="mosaicoColecciones">
       <div id="contenidoTodos">
-        <div style="border-style:solid; ">
-          <% for(i=0; i < aroParaYoga.length; i++) { %>
-            <h2>  <%=aroParaYoga[i].titulo%>  </h2>
-            <p>  <%=aroParaYoga[i].precio%>  </p>
-            <img>  <%=aroParaYoga[i].imagen%>  </img>
-            <h3>  <%=aroParaYoga[i].variantes%>  </h3>
-            <p>  <%=aroParaYoga[i].descripcion%>  </p>
-        <%  } %>
-</div>
+<!-- Aros para Pilates -->
+        <div class="padreArticulo">
+          <% for(i=0; i < arosParaPilates.length; i++) { %>
+            <img loading="lazy" src="<%=arosParaPilates[i].imagen%>" width="100%"> </img>
+            <h2> <%=arosParaPilates[i].titulo%> </h2>
+            <p>$ <%=arosParaPilates[i].precio%> mxn </p>
+            <button onclick="clicPop()" id="myBtn">Ver más modelos</button>
+            <% } %>
+        </div>
 
+<!-- Bolsas para Yoga -->
+        <div class="padreArticulo">
+          <% for(i=0; i < bolsasParaYoga.length; i++) { %>
+            <img loading="lazy" src="<%=bolsasParaYoga[i].imagen%>" width="100%"> </img>
+            <h2> <%=bolsasParaYoga[i].titulo%> </h2>
+            <p>$ <%=bolsasParaYoga[i].precio%> mxn </p>
+            <button onclick="clicPop()" id="myBtn">Ver más modelos</button>
+            <% } %>
+        </div>
 
-<div style="border-style:solid; ">
-        <% for(i=0; i < sopa1.length; i++) { %>
-          <img width="350px" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aroUno.jpg?v=1638330383"></img>
-          <h2 name=Título>  <%=sopa1[i].titulo%>  </h2>
-          <p>  <%=sopa1[i].precio%>  </p>
-          <button>Ver más modelos</button>
-      <%  } %>
-  </div>
+        
+<!-- Artículo de prueba -->
+        <div class="padreArticulo">
+          <% for(i=0; i < arosParaPilates.length; i++) { %>
+            <img loading="lazy" src="<%=arosParaPilates[i].imagen%>" width="100%"> </img>
+            <h2> <%=arosParaPilates[i].titulo%> </h2>
+            <p>$ <%=arosParaPilates[i].precio%> mxn </p>
+            <button onclick="clicPop()" id="myBtn">Ver más modelos</button>
+            <% } %>
+        </div>
+
       </div>
-
-
-
-
-
-
-
 
       <div id="contenidoUno" style="display: none">
         <h3>Soy el id=contenidoUno para artículos de PILATESS</h3>
-        <%- include('./template/productos/aroParaPilates/aroParaPilates.ejs') %>
       </div>
 
       <div id="contenidoDos" style="display: none">
         <h3>Soy el id=contenidoDos para artículos de YOGA</h3>
-        <table border="1">
-          <tr>
-            <th>titulo</th>
-            <th>precio</th>
-            <th>imagen</th>
-            <th>variantes</th>
-            <th>descripcion</th>
-            <th>botonAddToCar</th>
-          </tr>
-          
-        </table>
       </div>
     </div>
 
@@ -116,7 +102,7 @@
 
 
 
-<!-- The Modal -->
+    <!-- The Modal -->
     <div id="myModal" class="modal">
 
       <!-- Modal content -->
@@ -128,44 +114,12 @@
 
 
 
-<!-- Inicia Efecto para mostrar MODAL/POPUP -->
-    <script type="text/javascript">
-      // Get the modal
-      var modal = document.getElementById("myModal");
-
-      // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on the button, open the modal
-      btn.onclick = function () {
-        modal.style.display = "block";
-      }
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = "none";
-      }
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
-<!-- Fin Efecto para mostrar MODAL/POPUP -->
-
-
-
-
-
-
     <!-- Script para efecto de navegación Colección -->
     <script src="./scripts/parrafoTienda.js"></script>
 
+     <!-- Inicia Efecto para mostrar MODAL/POPUP -->
+     <script src="./scripts/pop.js"></script>
+     <!-- Fin Efecto para mostrar MODAL/POPUP -->
 
 </body>
 
