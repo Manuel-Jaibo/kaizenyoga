@@ -15,7 +15,6 @@
     <!-- Inicia enlace para CSS Index -->
 
 <body class="tienda">
-
   <!-- Inicia Barra superior-->
   <%- include('./template/barraSuperior.ejs') %>
     <!-- Fin Barra superior-->
@@ -31,16 +30,15 @@
     <nav class="navColecciones">
       <ul>
         <button id="textoColeccionTodos" onclick="botonColeccionTodos()">
-          <li>Colección Todos</li>
+          <li>Todos</li>
         </button>
 
         <button id="botonColeccionUno" onclick="botonColeccionUno()">
-          <li>Colección Uno</li>
-
+          <li>Yoga</li>
         </button>
 
         <button id="botonColeccionDos" onclick="botonColeccionDos()">
-          <li>Colección Dos</li>
+          <li>Meditación</li>
         </button>
       </ul>
     </nav>
@@ -50,31 +48,15 @@
 
     <div class="mosaicoColecciones">
       <div id="contenidoTodos">
-<!-- Aros para Pilates -->
-        <div class="padreArticulo">
-          <% for(i=0; i < arosParaPilates.length; i++) { %>
-            <img loading="lazy" src="<%=arosParaPilates[i].imagen%>" width="100%"> </img>
-            <h2> <%=arosParaPilates[i].titulo%> </h2>
-            <p>$ <%=arosParaPilates[i].precio%> mxn </p>
-            <button onclick="clicPop()" id="myBtn">Ver modelos</button>
-            <% } %>
-        </div>
-
-<!-- Bolsas para Yoga -->
-        
-
-        
-<!-- Artículo de prueba -->
-        <div class="padreArticulo" >
-          <% for(i=0; i < arosParaPilates.length; i++) { %>
-            <img loading="lazy" src="<%=arosParaPilates[i].imagen%>" width="100%"> </img>
-            <h2> <%=arosParaPilates[i].titulo%> </h2>
-            <p>$ <%=arosParaPilates[i].precio%> mxn </p>
-            <button onclick="clicPop()" id="myBtn">Ver modelos</button>
-            <% } %>
-        </div>
-
-
+        <!-- Todos los artículos -->
+        <% for(i=0; i < articulos.length; i++) { %>
+          <div id="myBtn" class="padreArticulo">
+            <img loading="lazy" src="<%=articulos[i].imagen%>" width="100%"> </img>
+            <h2 name="<%=articulos[i].titulo%>"><%=articulos[i].titulo%></h2>
+            <p>$ <%=articulos[i].precio%> mxn </p>
+            <button>Ver modelos</button>
+          </div>
+          <% } %>
       </div>
 
       <div id="contenidoUno" style="display: none">
@@ -94,26 +76,26 @@
 
 
 
-
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <%- include('./template/productos/aroParaPilates') %>
+
+        <% for(i=0; i < articulos.length; i++) { %>
+            <h2><%=articulos[i].titulo%></h2>
+          <% } %>
       </div>
     </div>
-
-<!-- Inicia Efecto para mostrar MODAL/POPUP -->
-<script src="./scripts/pop.js"></script>
-<!-- Fin Efecto para mostrar MODAL/POPUP -->
+    <!-- Inicia Efecto para mostrar MODAL/POPUP -->
+    <script src="./scripts/pop.js"></script>
+    <!-- Fin Efecto para mostrar MODAL/POPUP -->
 
     <!-- Script para efecto de navegación Colección -->
     <script src="./scripts/parrafoTienda.js"></script>
 
-     
-
+   
 </body>
 
 </html>

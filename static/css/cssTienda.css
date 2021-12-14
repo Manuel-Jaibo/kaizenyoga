@@ -23,19 +23,7 @@ html p{
   background-image: url(../media/Tienda/fondo-tienda.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: unset;
-}
-
-.divArticulo{
-  width: 300px;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  background-attachment: fixed;
 }
 
 .navColecciones ul button {
@@ -70,13 +58,11 @@ li {
 }
 
 .padreArticulo{
+  margin: 10px 3px;
   border-style:none;
-  width: 300px;
+  width: 250px;
   box-shadow: 0px 0px 4px 1px #564693;
-}
-
-.padreArticulo *{
-  margin-bottom: 5px;
+  background-color: #ffffff;
 }
 
 .padreArticulo button{
@@ -84,6 +70,7 @@ li {
   border: none;
   padding: 8px 15px;
   box-shadow: 0px 0px 5px 2px #8E4091;
+  cursor: pointer;
 }
 
 /* The Modal (background) */
@@ -123,7 +110,6 @@ li {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 .productoPop{
   display: flex;
