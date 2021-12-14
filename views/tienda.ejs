@@ -52,12 +52,14 @@
         <% for(i=0; i < articulos.length; i++) { %>
           <div id="myBtn" class="padreArticulo">
             <img loading="lazy" src="<%=articulos[i].imagen%>" width="100%"> </img>
-            <h2 name="<%=articulos[i].titulo%>"><%=articulos[i].titulo%></h2>
+            <h2><%=articulos[i].titulo%></h2>
             <p>$ <%=articulos[i].precio%> mxn </p>
-            <button>Ver modelos</button>
+            <button name="<%=articulos[i].titulo%>">Ver modelos</button>
+            <!-- Quizá poner el button en input, para luego tomar el valor de un input -->
           </div>
           <% } %>
       </div>
+
 
       <div id="contenidoUno" style="display: none">
         <h3>Soy el id=contenidoUno para artículos de PILATES</h3>
@@ -80,14 +82,23 @@
     <div id="myModal" class="modal">
 
       <!-- Modal content -->
-      <div class="modal-content">
+      <div style="display: flex;" class="modal-content">
         <span class="close">&times;</span>
-
-        <% for(i=0; i < articulos.length; i++) { %>
-            <h2><%=articulos[i].titulo%></h2>
-          <% } %>
+        <% if (you) { %>
+          <div>
+            <img width="500px" src="<%=you.imagen%>" alt="">
+          </div>
+          <div>
+            <h2><%=you.titulo%></h2>
+            <p><%=you.descripcion%></p>
+            <p>$ <%=you.precio%> mxn</p>
+          </div>
+        <% } %>
       </div>
     </div>
+
+
+
     <!-- Inicia Efecto para mostrar MODAL/POPUP -->
     <script src="./scripts/pop.js"></script>
     <!-- Fin Efecto para mostrar MODAL/POPUP -->

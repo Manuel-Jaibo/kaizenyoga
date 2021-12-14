@@ -4,13 +4,12 @@ document.addEventListener('click', (e) => {
   console.log(e.target.tagName)
 
   if (e.target && e.target.tagName === 'BUTTON') {
-    const article = document.getElementsByName('La caca');
-    console.log(article)
     // Get the modal
     var modal = document.getElementById("myModal");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
+
 
     modal.style.display = "block";
 
