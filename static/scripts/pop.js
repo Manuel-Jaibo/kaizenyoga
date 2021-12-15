@@ -1,6 +1,9 @@
-const element = document.getElementById('myBtn');
+
 
 document.addEventListener('click', (e) => {
+  const element = document.getElementById('myBtn');
+  console.log(element)
+
   console.log(e.target.tagName)
 
   if (e.target && e.target.tagName === 'BUTTON') {
