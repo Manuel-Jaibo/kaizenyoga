@@ -154,28 +154,27 @@
           <% } %>
       </div>
 
-      <% for(i=0; i < articulos.length; i++) { %>
-      <script>
-        const buala = document.getElementsByClassName('<%=articulos[i].titulo%>');
-        console.log(buala)
-        
-      </script>
-<% } %>
 
       <div id="contenidoUno" style="display: none">
-        <% for(i=0; i < articulos.length; i++) { %>
-          <div id="myBtn" class="padreArticulo">
-            <img loading="lazy" src="<%=articulos[i].imagen%>" width="100%"> </img>
-            <h2><%=articulos[i].titulo%></h2>
-            <p>$ <%=articulos[i].precio%> mxn </p>
-            <button class="<%=articulos[i].titulo%>">Ver modelos</button>
-            <!-- Quizá poner el button en input, para luego tomar el valor de un input -->
-          </div>
-          <% } %>
+        <% if (yoga) { %>
+            <div>
+              <img width="500px" src="<%=yoga.imagen%>" alt="<%=you.titulo%>">
+            </div>
+            
+            <div>
+              <h2><%=yoga.titulo%></h2>
+              <p><%=yoga.descripcion%></p>
+              <p>$ <%=yoga.precio%> mxn</p>
+              <p id='product-component-1638933480883'></p>
+            </div>
+          <% }  %>
       </div>
 
       <div id="contenidoDos" style="display: none">
         <h3>Soy el id=contenidoDos para artículos de YOGA</h3>
+        <!-- <div class="image-container">
+          <img id="dinant" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-morado-y-azul.jpg?v=1639530023" width="500" height="500">
+        </div> -->
       </div>
     </div>
 
@@ -186,6 +185,62 @@
     </footer>
 
 
+    <!-- <script text="Javascript">
+      function Zoom(img, zoom) {
+  var img, loupe, width, height, back;
+  img = document.getElementById("dinant");
+
+  loupe = document.createElement("div");
+  loupe.setAttribute("class", "magnifier-glass");
+
+  img.parentElement.insertBefore(loupe, img);
+  loupe.style.backgroundImage = "url('" + img.src + "')";
+  loupe.style.backgroundRepeat = "no-repeat";
+  loupe.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  back = 2;
+  width = loupe.offsetWidth / 2;
+  height = loupe.offsetHeight / 2;
+
+  loupe.addEventListener("mousemove", moveLoupe);
+  img.addEventListener("mousemove", moveLoupe);
+  loupe.addEventListener("touchmove", moveLoupe);
+  img.addEventListener("touchmove", moveLoupe);
+  
+  function moveLoupe(e) {
+    var pos, x, y;
+
+    e.preventDefault();
+
+    pos = position(e);
+    x = pos.x;
+    y = pos.y;
+
+    if (x > img.width - (width / zoom)) {x = img.width - (width / zoom);}
+    if (x < width / zoom) {x = width / zoom;}
+    if (y > img.height - (height / zoom)) {y = img.height - (height / zoom);}
+    if (y < height / zoom) {y = height / zoom;}
+
+    loupe.style.left = (x - width) + "px";
+    loupe.style.top = (y - height) + "px";
+    loupe.style.backgroundPosition = "-" + ((x * zoom) - width + back) + "px -" + ((y * zoom) - height + back) + "px";
+  }
+  function position(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+
+    a = img.getBoundingClientRect();
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+
+Zoom("dinant", 2);
+    </script> -->
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -194,15 +249,18 @@
       <div style="display: flex;" class="modal-content">
         <span class="close">&times;</span>
         <% if (you) { %>
-              <div>
-                <img width="500px" src="<%=you.imagen%>" alt="<%=you.titulo%>">
-              </div>
+              <!-- <div>
+                <img width="500px" src="" alt="">
+              </div> -->
               
               <div>
                 <h2><%=you.titulo%></h2>
                 <p><%=you.descripcion%></p>
                 <p>$ <%=you.precio%> mxn</p>
                 <p id='product-component-1638933480883'></p>
+              </div>
+              <div class="image-container">
+                <img id="dinant" src="<%=you.imagen%>" width="500" height="500">
               </div>
             <% }  %>
       </div>

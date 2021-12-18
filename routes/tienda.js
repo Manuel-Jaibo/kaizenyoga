@@ -117,7 +117,7 @@ var articulos = [
 // const   = 'Bolsas para yoga';
 
 const you = articulos.find(you => 
-    you.titulo === 'Bolsas para yoga');
+    you.titulo === 'Zafu chakras');
     const tuTitulo = you.titulo;
     console.log(tuTitulo);
 
