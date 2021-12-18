@@ -71,6 +71,7 @@ var articulos = [
         imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/7813.jpg?v=1639530466',
         descripcion: 'esto es otra prueba de titutlo. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero repellendus, eaque, amet at aut, voluptatum qui dignissimos voluptatem similique officia hic sequi expedita molestias illo dicta unde necessitatibus fugit.',
         botonAddToCar: 'd',
+        url: 'http://localhost:5000/tienda/articulo-de-prueba'
     },
     {
         colecciones: 'pilates',
@@ -144,7 +145,7 @@ route.get('/', function (req, res) {
 
 
 
-
+// RECORRER LA BASE DE DATOS Y TRAER SOLO EL NOMBRE DEL ARTÍCULO DE PRUEBA Y MANDARLO JUNTO CON EL RES.RENDER EN FORMA DE VARIABLE, YA DENTRO DEL ARTÍCULO DE PRUEBA, SE TRAERÁ MEDIANTE EL IF DEL MODAL QUE SE USÓ EN /TIENDA
 route.get('/articulo-de-prueba', function (req, res) {
     res.render("articuloPrueba")});
 
