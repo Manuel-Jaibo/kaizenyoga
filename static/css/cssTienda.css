@@ -126,7 +126,7 @@ li {
 
 .magnifier-glass {
   position: absolute;
-  border: 5px solid #333;
+  border: 5px solid #8E4091;
   border-radius: 50%;
   cursor: none;
   width: 100px;
@@ -139,8 +139,15 @@ li {
   width: 15px;
   height:70px;
   border-radius: 30px;
-  background-color: #333;
+  background-color: #8E4091;
   top:86px;
   left:90px;
   transform: rotate(-33deg);
+  -webkit-transform: rotate(-33deg);
+  -moz-transform: rotate(-33deg);
+  -ms-transform: rotate(-33deg);
+  -o-transform: rotate(-33deg);
+}
+.hole{
+  width: 600px;
 }

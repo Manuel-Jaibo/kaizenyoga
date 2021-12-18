@@ -145,10 +145,8 @@ route.get('/', function (req, res) {
 
 
 
-route.get('/yoga', function (req, res) {
-    // res.render("tienda", { articulos })
-    res.send('Estás en kaizenyoga.com.mx/tienda/yoga')
-});
+route.get('/articulo-de-prueba', function (req, res) {
+    res.render("articuloPrueba")});
 
 
 
