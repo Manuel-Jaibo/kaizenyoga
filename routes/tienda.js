@@ -145,10 +145,10 @@ route.get('/', function (req, res) {
 
 // RECORRER LA BASE DE DATOS Y TRAER SOLO EL NOMBRE DEL ARTÍCULO DE PRUEBA Y MANDARLO JUNTO CON EL RES.RENDER EN FORMA DE VARIABLE, YA DENTRO DEL ARTÍCULO DE PRUEBA, SE TRAERÁ MEDIANTE EL IF DEL MODAL QUE SE USÓ EN /TIENDA.
 route.get('/aros-para-yoga', function (req, res) {
-    res.render('articuloPrueba')});
+    res.render('pages/articuloPrueba')});
 
 
-
+//METER EN VIEWS/PAGES LAS PÁGINAS URL DE CADA UNO DE LOS ARTÍCULOS
 
 
 
