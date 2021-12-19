@@ -145,10 +145,13 @@
         <!-- Todos los artículos -->
         <% for(i=0; i < articulos.length; i++) { %>
           <div id="myBtn" class="padreArticulo">
-            <img loading="lazy" src="<%=articulos[i].imagen%>" width="100%"> </img>
+            <img loading="lazy" src="<%=articulos[i].imagen%>" width="100%" alt="<%=articulos[i].titulo%>"> </img>
             <h2><%=articulos[i].titulo%></h2>
             <p>$ <%=articulos[i].precio%> mxn </p>
-            <button class="<%=articulos[i].titulo%>">Ver modelos</button>
+            <button>
+              <a href="/tienda/<%=articulos[i].url%>"> Ver modelos</a>
+            </button>
+            
             <!-- Quizá poner el button en input, para luego tomar el valor de un input -->
           </div>
           <% } %>

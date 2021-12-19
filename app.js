@@ -20,7 +20,6 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 
-
 //Se importan Routes
 const rutaTienda = require('./routes/tienda');
 

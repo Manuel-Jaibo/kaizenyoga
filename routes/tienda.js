@@ -17,6 +17,7 @@ var articulos = [
     {
         colecciones: 'yoga',
         titulo: 'Aros para yoga', 
+        url: 'aros-para-yoga',
         precio: 700,
         imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-morado-y-azul.jpg?v=1639530023',
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero repellendus, eaque, amet at aut, voluptatum qui dignissimos voluptatem similique officia hic sequi expedita molestias illo dicta unde necessitatibus fugit.',
@@ -105,7 +106,6 @@ var articulos = [
         descripcion: 'esto es otra prueba de titutlo. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero repellendus, eaque, amet at aut, voluptatum qui dignissimos voluptatem similique officia hic sequi expedita molestias illo dicta unde necessitatibus fugit.',
         botonAddToCar: 'd',
     },
-
 ];
 
 //     const recorreTitulos = articulos.map(({colecciones, titulo}) => {
@@ -118,7 +118,7 @@ var articulos = [
 // const   = 'Bolsas para yoga';
 
 const you = articulos.find(you => 
-    you.titulo === 'Zafu chakras');
+    you.titulo === 'Zabutones');
     const tuTitulo = you.titulo;
     console.log(tuTitulo);
 
@@ -135,19 +135,19 @@ route.get('/', function (req, res) {
 
 
     res.render("tienda", 
-    {articulos: articulos,
-    you: you,
+    {articulos: articulos, //para recorrer todos los articulos de todas las colecciones
+    you: you, //para recorrer todos los artículos de la colección 'yoga'
     tuTitulo: tuTitulo,
     yoga:yoga}
     );}
 );
 
 
+//EN LA BASE DE DATOS SE PONDRÁ LA URL DEL ARTÍCULO PARA POSTERIORMENTE PINTARLO DESDE LA TIENDA, Y QUE CUANDO DEN CLIC, EN LUGAR DE ABRIR EL POPUP, LES ABRIRÁ UNA NUEVA PÁGINA MEDIANTE UN AHREF EN ATRIBUTO BLANK.
 
-
-// RECORRER LA BASE DE DATOS Y TRAER SOLO EL NOMBRE DEL ARTÍCULO DE PRUEBA Y MANDARLO JUNTO CON EL RES.RENDER EN FORMA DE VARIABLE, YA DENTRO DEL ARTÍCULO DE PRUEBA, SE TRAERÁ MEDIANTE EL IF DEL MODAL QUE SE USÓ EN /TIENDA
-route.get('/articulo-de-prueba', function (req, res) {
-    res.render("articuloPrueba")});
+// RECORRER LA BASE DE DATOS Y TRAER SOLO EL NOMBRE DEL ARTÍCULO DE PRUEBA Y MANDARLO JUNTO CON EL RES.RENDER EN FORMA DE VARIABLE, YA DENTRO DEL ARTÍCULO DE PRUEBA, SE TRAERÁ MEDIANTE EL IF DEL MODAL QUE SE USÓ EN /TIENDA.
+route.get('/aros-para-yoga', function (req, res) {
+    res.render('articuloPrueba')});
 
 
 
