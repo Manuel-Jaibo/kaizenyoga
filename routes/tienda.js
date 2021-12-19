@@ -132,8 +132,6 @@ route.get('/', function (req, res) {
 //   })
 
 
-
-
     res.render("tienda", 
     {articulos: articulos, //para recorrer todos los articulos de todas las colecciones
     you: you, //para recorrer todos los artículos de la colección 'yoga'
