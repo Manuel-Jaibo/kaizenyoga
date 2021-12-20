@@ -10,9 +10,14 @@
   <%- include('./template/head.ejs') %>
     <!-- Fin Head (CSS General, Tipografía y Fontawesoma para íconos)-->
 
-    <!-- Inicia enlace para CSS Index -->
+    <!-- Inicia enlace para CSS de Tienda -->
     <link rel="stylesheet" href="../css/cssTienda.css" />
-    <!-- Inicia enlace para CSS Index -->
+    <!-- Fin enlace para CSS de Tienda -->
+
+    <!-- Inicia enlace para CSS de OcultaShopify -->
+    <link rel="stylesheet" href="../css/cssOcultaShopify.css"/>
+    <!-- Inicia enlace para CSS de OcultaShopify -->
+
 </head>
 <body class="tienda">
   <!-- Inicia Barra superior-->
@@ -38,7 +43,7 @@
         </button>
 
         <button id="botonColeccionDos" onclick="botonColeccionDos()">
-          <li>Meditación</li>
+          <li>Pilates</li>
         </button>
       </ul>
     </nav>
@@ -57,31 +62,37 @@
             <button>
               <a href="/tienda/<%=articulos[i].url%>"> Ver modelos</a>
             </button>
-            
-            <!-- Quizá poner el button en input, para luego tomar el valor de un input -->
           </div>
           <% } %>
       </div>
 
 
       <div id="contenidoUno" style="display: none">
-        <% if (yoga) { %>
-            <div>
-              <img width="500px" src="<%=yoga.imagen%>" alt="<%=you.titulo%>">
-            </div>
-            
-            <div>
-              <h2><%=yoga.titulo%></h2>
-              <p><%=yoga.descripcion%></p>
-              <p>$ <%=yoga.precio%> mxn</p>
-              <p id='product-component-1638933480883'></p>
-            </div>
-          <% }  %>
+        <!-- Todo Yoga -->
+        <% for(i=0; i < yoga.length; i++) { %>
+          <div id="myBtn" class="padreArticulo">
+            <img loading="lazy" src="<%=yoga[i].imagen%>" width="100%"> </img>
+            <h2><%=yoga[i].titulo%></h2>
+            <p>$ <%=yoga[i].precio%> mxn </p>
+            <button>
+              <a href="/tienda/<%=yoga[i].url%>"> Ver modelos</a>
+            </button>
+          </div>
+          <% } %>
       </div>
 
       <div id="contenidoDos" style="display: none">
-        <h3>Soy el id=contenidoDos para artículos de YOGA</h3>
-        
+        <!-- Todo Pilates -->
+        <% for(i=0; i < pilates.length; i++) { %>
+          <div id="myBtn" class="padreArticulo">
+            <img loading="lazy" src="<%=pilates[i].imagen%>" width="100%"> </img>
+            <h2><%=pilates[i].titulo%></h2>
+            <p>$ <%=pilates[i].precio%> mxn </p>
+            <button>
+              <a href="/tienda/<%=pilates[i].url%>"> Ver modelos</a>
+            </button>
+          </div>
+          <% } %>
       </div>
     </div>
 
@@ -92,43 +103,103 @@
     </footer>
 
 
-    
-
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-      <!-- Modal content -->
-      <div style="display: flex;" class="modal-content">
-        <span class="close">&times;</span>
-        <% if (you) { %>
-              <!-- <div>
-                <img width="500px" src="" alt="">
-              </div> -->
-              
-              <div>
-                <h2><%=you.titulo%></h2>
-                <p><%=you.descripcion%></p>
-                <p>$ <%=you.precio%> mxn</p>
-                <p id='product-component-1638933480883'></p>
-              </div>
-              <div class="image-container">
-                <img id="dinant" src="<%=you.imagen%>" width="500" height="500">
-              </div>
-            <% }  %>
-      </div>
-    </div>
-
-
-
-    <!-- Inicia Efecto para mostrar MODAL/POPUP -->
-    <script src="./scripts/pop.js"></script>
-    <!-- Fin Efecto para mostrar MODAL/POPUP -->
-
     <!-- Script para efecto de navegación Colección -->
     <script src="./scripts/parrafoTienda.js"></script>
     
-      
+    <script type="text/javascript">
+      /*<![CDATA[*/
+      (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+          if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+          } else {
+            loadScript();
+          }
+        } else {
+          loadScript();
+        }
+        function loadScript() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = scriptURL;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+          script.onload = ShopifyBuyInit;
+        }
+        function ShopifyBuyInit() {
+          var client = ShopifyBuy.buildClient({
+            domain: 'kaizencuatro.myshopify.com',
+            storefrontAccessToken: '4164ed056729419d3e24bb720d01c9a4',
+          });
+          ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('product', {
+              id: '6671434645642',
+              node: document.getElementById('product-component-1639966085948'),
+              moneyFormat: '%24%20%7B%7Bamount%7D%7D',
+              options: {
+        "product": {
+          "styles": {
+            "product": {
+              "@media (min-width: 601px)": {
+                "max-width": "calc(25% - 20px)",
+                "margin-left": "20px",
+                "margin-bottom": "50px"
+              }
+            }
+          },
+          "contents": {
+            "img": false,
+            "title": false,
+            "price": false
+          },
+          "text": {
+            "button": "Add to cart"
+          }
+        },
+        "productSet": {
+          "styles": {
+            "products": {
+              "@media (min-width: 601px)": {
+                "margin-left": "-20px"
+              }
+            }
+          }
+        },
+        "modalProduct": {
+          "contents": {
+            "img": false,
+            "imgWithCarousel": true,
+            "button": false,
+            "buttonWithQuantity": true
+          },
+          "styles": {
+            "product": {
+              "@media (min-width: 601px)": {
+                "max-width": "100%",
+                "margin-left": "0px",
+                "margin-bottom": "0px"
+              }
+            }
+          },
+          "text": {
+            "button": "Añadir al carrito"
+          }
+        },
+        "option": {},
+        "cart": {
+          "text": {
+            "total": "Total",
+            "button": "Pagar"
+          }
+        },
+        "toggle": {}
+      },
+            });
+          });
+        }
+      })();
+      /*]]>*/
+      </script>
 
 </body>
 

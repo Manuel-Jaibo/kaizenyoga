@@ -23,7 +23,6 @@ app.set('views', __dirname + '/views');
 //Se importan Routes
 const rutaTienda = require('./routes/tienda');
 
-
 //MIDDLEWARE
 app.use('/tienda', rutaTienda);
 
@@ -33,14 +32,6 @@ app.use('/tienda', rutaTienda);
 app.get('/', (req, res) => {
       res.render("index")
 });
-
-// app.get('/tienda', (req, res) => {
-//     res.render("tienda")
-// });
-
-
-
-
 
 
 
