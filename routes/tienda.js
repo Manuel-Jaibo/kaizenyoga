@@ -94,7 +94,6 @@ const pilates = articulos.filter(pilates =>
 
 
 
-
 route.get('/', function (req, res) {
     res.render("tienda", 
     {articulos: articulos, //para recorrer todos los articulos de todas las colecciones
@@ -104,13 +103,14 @@ route.get('/', function (req, res) {
 );
 
 
-route.get('/aros-para-yoga', function (req, res) {
-    const arosParaYoga = articulos.find(arosParaYoga => 
-        arosParaYoga.titulo === 'Aros para yoga');
-    res.render('articuloPrueba'),
-    {arosParaYoga: arosParaYoga}}
-);
+const arosParaYoga = articulos.find(arosParaYoga => 
+    arosParaYoga.titulo === 'Aros para yoga');
 
+    route.get('/aros-para-yoga', function (req, res) {
+        res.render("arosParaYoga", 
+        {arosParaYoga: arosParaYoga}
+        );}
+    );
 
 
 

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kaizen Yoga 2021</title>
+  <title>Tienda de Yoga</title>
 
   <!-- Inicia Head (CSS General, Tipografía y Fontawesoma para íconos)-->
   <%- include('./template/head.ejs') %>
@@ -71,7 +71,7 @@
         <!-- Todo Yoga -->
         <% for(i=0; i < yoga.length; i++) { %>
           <div id="myBtn" class="padreArticulo">
-            <img loading="lazy" src="<%=yoga[i].imagen%>" width="100%"> </img>
+            <img loading="lazy" src="<%=yoga[i].imagen%>" width="280px"> </img>
             <h2><%=yoga[i].titulo%></h2>
             <p>$ <%=yoga[i].precio%> mxn </p>
             <button>

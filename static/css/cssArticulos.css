@@ -1,0 +1,35 @@
+html h2{
+  font-size: 30px;
+}
+
+html p{
+  font-size: 20px;
+}
+
+html h4{
+  padding-top: 15px;
+  font-size: 23px;
+  color: #8E4091;
+  text-align: left;
+}
+
+.precioArticulo{
+  font-size: 25px;
+}
+
+.padreArticulos{
+  padding: 5% 10%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.divA{
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.divA *{
+  padding-bottom: 5px;
+}
