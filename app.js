@@ -24,7 +24,7 @@ app.set('views', __dirname + '/views');
 const rutaTienda = require('./routes/tienda');
 
 //MIDDLEWARE
-app.use('/tienda', rutaTienda);
+app.use('/tiendase', rutaTienda);
 
 
 
