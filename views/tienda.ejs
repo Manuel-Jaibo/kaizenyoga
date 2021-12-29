@@ -59,9 +59,9 @@
             <img loading="lazy" src="<%=articulos[i].imagen%>" width="100%" alt="<%=articulos[i].titulo%>"> </img>
             <h2><%=articulos[i].titulo%></h2>
             <p>$ <%=articulos[i].precio%> mxn </p>
-            <button>
-              <a href="/tienda/<%=articulos[i].url%>"> Ver modelos</a>
-            </button>
+            <a href="/tienda/<%=articulos[i].url%>">
+              <button>Ver artículo</button>
+            </a>
           </div>
           <% } %>
       </div>
@@ -71,12 +71,12 @@
         <!-- Todo Yoga -->
         <% for(i=0; i < yoga.length; i++) { %>
           <div id="myBtn" class="padreArticulo">
-            <img loading="lazy" src="<%=yoga[i].imagen%>" width="280px"> </img>
+            <img loading="lazy" src="<%=yoga[i].imagen%>" width="100%"> </img>
             <h2><%=yoga[i].titulo%></h2>
             <p>$ <%=yoga[i].precio%> mxn </p>
-            <button>
-              <a href="/tienda/<%=yoga[i].url%>"> Ver modelos</a>
-            </button>
+              <a href="/tienda/<%=yoga[i].url%>">
+                <button>Ver artículo</button>
+              </a>
           </div>
           <% } %>
       </div>
@@ -88,18 +88,16 @@
             <img loading="lazy" src="<%=pilates[i].imagen%>" width="100%"> </img>
             <h2><%=pilates[i].titulo%></h2>
             <p>$ <%=pilates[i].precio%> mxn </p>
-            <button>
-              <a href="/tienda/<%=pilates[i].url%>"> Ver modelos</a>
-            </button>
+            <a href="/tienda/<%=pilates[i].url%>">
+              <button>Ver artículo</button>
+            </a>
           </div>
           <% } %>
       </div>
     </div>
 
     <footer>
-      <div>Contacto</div>
-      <div>Redes</div>
-      <div>Métodos de pago</div>
+      <%- include('./template/footer.ejs') %>
     </footer>
 
 

@@ -33,3 +33,32 @@ html h4{
 .divA *{
   padding-bottom: 5px;
 }
+
+.image-container {
+  position:relative;
+}
+
+.magnifier-glass {
+  position: absolute;
+  border: 5px solid #000000;
+  border-radius: 50%;
+  cursor: none;
+  width: 100px;
+  height: 100px;
+}
+
+.magnifier-glass:before {
+  content:"";
+  position: absolute;
+  width: 25px;
+  /* height:80px; */
+  border-radius: 30px;
+  background-color: #8E4091;
+  top:86px;
+  left:90px;
+  transform: rotate(-33deg);
+  -webkit-transform: rotate(-33deg);
+  -moz-transform: rotate(-33deg);
+  -ms-transform: rotate(-33deg);
+  -o-transform: rotate(-33deg);
+}

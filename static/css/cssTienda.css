@@ -59,15 +59,15 @@ li {
 }
 
 .padreArticulo{
-  margin: 10px 3px;
+  margin: 16px -12px;
   border-style:none;
-  width: 280px;
+  width: 330px;
   box-shadow: 0px 0px 4px 1px #564693;
   background-color: #ffffff;
 }
 
 .padreArticulo button{
-  margin: 10px 0 20px 0;
+  margin: 20px 0 30px 0;
   border: none;
   padding: 8px 15px;
   box-shadow: 0px 0px 5px 2px #8E4091;
@@ -76,34 +76,4 @@ li {
 
 .padreArticulo button a{
   font-size: 14px;
-}
-
-
-.image-container {
-  position:relative;
-}
-
-.magnifier-glass {
-  position: absolute;
-  border: 5px solid #8E4091;
-  border-radius: 50%;
-  cursor: none;
-  width: 100px;
-  height: 100px;
-}
-
-.magnifier-glass:before {
-  content:"";
-  position: absolute;
-  width: 15px;
-  height:70px;
-  border-radius: 30px;
-  background-color: #8E4091;
-  top:86px;
-  left:90px;
-  transform: rotate(-33deg);
-  -webkit-transform: rotate(-33deg);
-  -moz-transform: rotate(-33deg);
-  -ms-transform: rotate(-33deg);
-  -o-transform: rotate(-33deg);
 }

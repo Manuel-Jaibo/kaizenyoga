@@ -1,4 +1,7 @@
+document.addEventListener(onmousemove, Zoom);
+
 function Zoom(img, zoom) {
+  
     var img, loupe, width, height, back;
     img = document.getElementById("dinant");
   
@@ -9,8 +12,8 @@ function Zoom(img, zoom) {
     loupe.style.backgroundImage = "url('" + img.src + "')";
     loupe.style.backgroundRepeat = "no-repeat";
     loupe.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-    back = 2;
-    width = loupe.offsetWidth / 2;
+    back = 50;
+    width = loupe.offsetWidth / 1;
     height = loupe.offsetHeight / 2;
   
     loupe.addEventListener("mousemove", moveLoupe);
