@@ -13,6 +13,9 @@ var articulos = [
         imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-uno.jpg?v=1640310063',
         imagen2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-dos.jpg?v=1640310064',
         imagen3: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-tres.jpg?v=1640310064',
+        variante1: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/morado-y-azul.jpg?v=1640765757',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/morado-y-rosa.jpg?v=1640765758',
+        variante3: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/negro-y-rosa.jpg?v=1640765757',
     },
 ];
 

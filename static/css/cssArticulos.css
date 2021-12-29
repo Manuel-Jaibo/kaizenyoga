@@ -38,6 +38,10 @@ html h4{
   position:relative;
 }
 
+span{
+  font-size: 30px;
+}
+
 .magnifier-glass {
   position: absolute;
   border: 5px solid #000000;
