@@ -29,8 +29,9 @@ var articulos = [
         titulo: 'Rodillo para pilates', 
         url: 'rodillo-para-pilates',
         precio: 1500,
-        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/pProdillo-para-pilates.jpg?v=1640839088',
-        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/pProdillo-para-pilates-rosa.jpg?v=1640839167',
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
     },
 ];
 
@@ -69,7 +70,7 @@ const rodilloParaPilates = articulos.find(rodilloParaPilates =>
     rodilloParaPilates.titulo === 'Rodillo para pilates');
     
     route.get('/rodillo-para-pilates', function (req, res) {
-            res.render("rodilloParaPilatesD", 
+            res.render("rodilloParaPilates", 
             {rodilloParaPilates: rodilloParaPilates}
             );}
         );
