@@ -1,68 +1,45 @@
-html h2{
-  font-size: 30px;
+
+.areaDos span{
+  font-size: 25px;
 }
 
 html p{
   font-size: 20px;
 }
 
-html h4{
-  padding-top: 15px;
-  font-size: 23px;
-  color: #8E4091;
-  text-align: left;
-}
-
-.precioArticulo{
-  font-size: 25px;
-}
-
-.padreArticulos{
-  padding: 5% 10%;
+.principal{
+  margin-top: 80px;
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 100%;
+  padding: 0 10%;
+  justify-content: center;
 }
 
-.divA{
-  display: block;
-  margin: auto;
-  width: 50%;
+.area {
+  width: 40%;
 }
 
-.divA *{
-  padding-bottom: 5px;
+.areaDos{
+  width: 60%;
+  text-align: left;
+  padding-left: 70px;
 }
 
-.image-container {
-  position:relative;
+.areaDos h1{
+  font-size: 32px;
+  font-weight: bolder;
 }
 
-span{
-  font-size: 30px;
+.areaDos h1,
+.areaDos h2{
+  color: #8E4091;
 }
 
-.magnifier-glass {
-  position: absolute;
-  border: 5px solid #000000;
-  border-radius: 50%;
-  cursor: none;
-  width: 100px;
-  height: 100px;
+.areaDos h3{
+  font-weight: normal;
 }
 
-.magnifier-glass:before {
-  content:"";
-  position: absolute;
-  width: 25px;
-  /* height:80px; */
-  border-radius: 30px;
-  background-color: #8E4091;
-  top:86px;
-  left:90px;
-  transform: rotate(-33deg);
-  -webkit-transform: rotate(-33deg);
-  -moz-transform: rotate(-33deg);
-  -ms-transform: rotate(-33deg);
-  -o-transform: rotate(-33deg);
-}
+
+
+

@@ -15,7 +15,7 @@ background-size: 100% 100%;
 }
 
 .sectionHome h1{
-    padding: 70px 170px 20px 170px;
+    padding: 2% 5%;
     color: #564693;
 }
 
@@ -24,34 +24,39 @@ background-size: 100% 100%;
     color: #564693;
 }
 
+.divHomeDosA h3{
+    color: #564693;
+}
+
+.sectionHome p{
+    padding: 0 7%;
+    color: #8E4091;
+}
+
 .contenedorSecciones{
-    margin: 0 10px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .contenedorSecciones div{
-    width: 650px;
+    width: 40%;
     margin: 45px 0;
-    padding: 0 15px;
 }
 
-.sectionHome p{
-    color: #8E4091;
-}
-
-.sectionHomeDiv{
-    display: flex;
-    width: 100%;
+.contenedorSecciones div p{
+    padding: 0;
 }
 
 .sectionHomeDos{
     width: 100%;
-    margin-top: 100px;
+    margin: 80px 0;
+    padding: 1% 5%;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    background-color: #55469321;
+    background-attachment: fixed;
 }
 
 .sectionHomeDos div{
@@ -59,36 +64,8 @@ background-size: 100% 100%;
     margin: auto;
 }
 
-/* .divHomeDos{
-    margin-top: 150px;
-    width: 100%;
-    display: flex;
-} */
-
-.divHomeDos div{
-    width: 50%;
+.homeH4{
+    text-align: center;
+    padding: 0 15%;
+    margin: 20px 100px 0 100px;
 }
-
-/* .divHomeDosA{
-    display: block;
-    margin: auto;
-} */
-
-/* .divHomeDosB{
-    display: block;
-    margin: auto;
-} */
-
-/* .sectionHomeDivUno{
-    margin-top: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-} */
-
-/* .sectionHomeDivDos{
-    margin-top: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-} */

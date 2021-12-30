@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="../css/cssArticulos.css" />
     <!-- Inicia enlace para CSS Articulos -->
 
-    <!-- Inicia enlace para CSS Articulos -->
+    <!-- Inicia enlace para CSS Zoom -->
     <link rel="stylesheet" href="../css/cssZoom.css" />
-    <!-- Inicia enlace para CSS Articulos -->
+    <!-- Inicia enlace para CSS Zoom -->
 
     
 </head>
@@ -30,11 +30,10 @@
     <!-- Fin Barra superior-->
     
     <header>
-      <!-- Inicia header-->
       <%- include('./template/header.ejs') %>
-        <!-- Fin header-->
-    </header>
+  </header>
 
+  
 <div class="principal">
   <div class="area">
     <% if (arosParaYoga) { %>
@@ -51,7 +50,7 @@
             <img src="<%=arosParaYoga.imagen3%>"/>
           </li>
           <li>
-            <img src="<%=arosParaYoga.variante1%>"/>
+            <img src="<%=arosParaYoga.variante%>"/>
           </li>
           <li>
             <img src="<%=arosParaYoga.variante2%>"/>
@@ -87,7 +86,7 @@
       <h3>Relleno:</h3>
     <br> <br>
   
-      <h3>Selecciona tu color favorito y añade al carrito</h3>
+      <h2>Selecciona tu color favorito y añade al carrito</h2>
       <div id='product-component-1640765349865'></div>
   </div>
 
@@ -101,22 +100,10 @@
 
 
 
-<!-- <script src="../scripts/efectoLupa.js"></script> -->
 
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script src="../scripts/zoom.js"></script>
-
-    <script>
-      $(function () {
-        $("#exzoom").exzoom({
-          autoPlay: false,
-          autoPlayTimeout: 4000,
-        });
-      });
-    </script>
+<!-- Inicia Scripts Zoom -->
+  <%- include('./template/scriptZoom.ejs') %>
+<!-- Fin Scripts Zoom -->
 
 
 <!-- Shopify Producto -->

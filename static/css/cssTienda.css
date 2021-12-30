@@ -47,7 +47,7 @@ li {
 
 .mosaicoColecciones {
   width: 100%;
-  padding: 3% 5%;
+  padding: 3% 15%;
 }
 
 #contenidoTodos,
@@ -59,21 +59,8 @@ li {
 }
 
 .padreArticulo{
-  margin: 16px -12px;
   border-style:none;
-  width: 330px;
+  width: 30%;
   box-shadow: 0px 0px 4px 1px #564693;
   background-color: #ffffff;
-}
-
-.padreArticulo button{
-  margin: 20px 0 30px 0;
-  border: none;
-  padding: 8px 15px;
-  box-shadow: 0px 0px 5px 2px #8E4091;
-  cursor: pointer;
-}
-
-.padreArticulo button a{
-  font-size: 14px;
 }

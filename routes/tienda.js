@@ -4,6 +4,13 @@ const route = express.Router();
 const app = express();
 app.set('view engine', 'ejs');
 
+// colecciones: 'yoga',
+// titulo: 'Aros para yoga', 
+// url: 'aros-para-yoga',
+// precio: 700,
+// imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-uno.jpg?v=1640310063',
+// variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-uno.jpg?v=1640310063',
+
 var articulos = [
     {
         colecciones: 'yoga',
@@ -13,9 +20,17 @@ var articulos = [
         imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-uno.jpg?v=1640310063',
         imagen2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-dos.jpg?v=1640310064',
         imagen3: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-tres.jpg?v=1640310064',
-        variante1: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/morado-y-azul.jpg?v=1640765757',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/morado-y-azul.jpg?v=1640765757',
         variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/morado-y-rosa.jpg?v=1640765758',
         variante3: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/negro-y-rosa.jpg?v=1640765757',
+    },
+    {
+        colecciones: 'pilates',
+        titulo: 'Rodillo para pilates', 
+        url: 'rodillo-para-pilates',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/pProdillo-para-pilates.jpg?v=1640839088',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/pProdillo-para-pilates-rosa.jpg?v=1640839167',
     },
 ];
 
@@ -33,12 +48,13 @@ const pilates = articulos.filter(pilates =>
 route.get('/', function (req, res) {
     res.render("tienda", 
     {articulos: articulos, //para recorrer todos los articulos de todas las colecciones
-     yoga: yoga,
-     pilates: pilates}
+     yoga: yoga, //obtener los artículos que contengan 'yoga' de colección
+     pilates: pilates} //obtener los artículos que contengan 'pilates' de colección
     );}
 );
 
 
+//Obtener aros para yoga
 const arosParaYoga = articulos.find(arosParaYoga => 
     arosParaYoga.titulo === 'Aros para yoga');
 
@@ -47,6 +63,16 @@ const arosParaYoga = articulos.find(arosParaYoga =>
         {arosParaYoga: arosParaYoga}
         );}
     );
+
+//Obtener rodillo para pilates
+const rodilloParaPilates = articulos.find(rodilloParaPilates => 
+    rodilloParaPilates.titulo === 'Rodillo para pilates');
+    
+    route.get('/rodillo-para-pilates', function (req, res) {
+            res.render("rodilloParaPilatesD", 
+            {rodilloParaPilates: rodilloParaPilates}
+            );}
+        );
 
 
 
