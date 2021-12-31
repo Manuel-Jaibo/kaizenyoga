@@ -1,9 +1,5 @@
-html{
-  text-align: center;
-}
-
 html h1 {
-  font-size: 24px;
+  font-size: 27px;
 }
 
 html h2{
@@ -33,11 +29,8 @@ html p{
   -moz-border-radius: 10px 10px 0 0;
   -ms-border-radius: 10px 10px 0 0;
   -o-border-radius: 10px 10px 0 0;
-}
-
-li {
-  list-style: none;
-  padding: 5px 10px;
+  background-color: transparent;
+  padding: 3px 30px !important;
 }
 
 .navColecciones {
@@ -48,6 +41,7 @@ li {
 .mosaicoColecciones {
   width: 100%;
   padding: 3% 15%;
+  text-align: center;
 }
 
 #contenidoTodos,
