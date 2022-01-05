@@ -61,7 +61,8 @@ const arosParaYoga = articulos.find(arosParaYoga =>
 
     route.get('/aros-para-yoga', function (req, res) {
         res.render("arosParaYoga", 
-        {arosParaYoga: arosParaYoga}
+        {arosParaYoga: arosParaYoga,
+            yoga: yoga,}
         );}
     );
 
