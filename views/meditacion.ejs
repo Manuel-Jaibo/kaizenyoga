@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meditación</title>
+
+  <!-- Inicia Head (CSS General, Tipografía y Fontawesoma para íconos)-->
+  <%- include('./template/head.ejs') %>
+    <!-- Fin Head (CSS General, Tipografía y Fontawesoma para íconos)-->
+
+    <!-- Inicia enlace para CSS de Tienda -->
+    <link rel="stylesheet" href="../css/cssTienda.css" />
+    <!-- Fin enlace para CSS de Tienda -->
+
+</head>
+<body class="tienda">
+  <!-- Inicia Barra superior-->
+  <%- include('./template/barraSuperior.ejs') %>
+    <!-- Fin Barra superior-->
+    
+    <header>
+      <!-- Inicia header-->
+      <%- include('./template/header.ejs') %>
+        <!-- Fin header-->
+    </header>
+
+
+    <div class="mosaicoColecciones">
+      <div id="contenidoUno">
+        <!-- Todo Meditación -->
+        <% for(i=0; i < meditacion.length; i++) { %>
+          <div id="myBtn" class="padreArticulo">
+            <img src="<%=meditacion[i].imagen%>" width="100%"> </img>
+            <h2><%=meditacion[i].titulo%></h2>
+            <p>$ <%=meditacion[i].precio%> mxn </p>
+              <a href="/<%=meditacion[i].url%>">
+                <button>Ver artículo</button>
+              </a>
+          </div>
+          <% } %>
+      </div>
+    </div>
+
+    <footer>
+      <%- include('./template/footer.ejs') %>
+    </footer>
+
+
+
+    <!-- Script para Active Carrito -->
+    <script defer src="./scripts/activeCarrito.js"></script>
+    
+
+</body>
+
+</html>

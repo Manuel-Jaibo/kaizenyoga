@@ -21,11 +21,12 @@ app.set('views', __dirname + '/views');
 
 
 //Se importan Routes
-const rutaTienda = require('./routes/tienda');
+// const rutaTienda = require('./routes/tienda');
+const rutaMeditacion = require('./routes/meditacion');
 
 //MIDDLEWARE
-app.use('/tienda', rutaTienda);
-
+// app.use('/tienda', rutaTienda);
+app.use('/meditacion', rutaMeditacion);
 
 
 // Rutas Renderizadas con EngineJs
