@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 var meditacion = [
     {
         colecciones: 'meditacion',
-        titulo: 'Zafú redondo liso',
+        titulo: 'Zafu redondo liso',
         url: 'zafu-redondo-liso',
         precio: 700,
         imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/aro-para-yoga-uno.jpg?v=1640310063',
@@ -16,7 +16,7 @@ var meditacion = [
     },
     {
         colecciones: 'meditacion',
-        titulo: 'Zafú redondo liso con diseño',
+        titulo: 'Zafu redondo liso con diseño',
         url: 'zafu-redondo-liso-con-diseno',
         precio: 1500,
         imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
@@ -29,13 +29,27 @@ var meditacion = [
 //Obtener todo de colecciones > meditacion
 const mediitacion = meditacion.filter(meditacion =>
     meditacion.colecciones === 'meditacion');
-
-
+//Ruta para /meditacion
 route.get('/', function (req, res) {
     res.render("meditacion",
-        {meditacion: mediitacion})
+        { meditacion: mediitacion })
 }
 );
+
+
+
+//Ruta para /meditacion/zafu-redondo-liso
+route.get('/zafu-redondo-liso', function (req, res) {
+    res.render("pages/zafuRedondoLiso",
+        { meditacion: mediitacion })
+}
+);
+
+
+
+
+
+
 
 module.exports = route;
 
