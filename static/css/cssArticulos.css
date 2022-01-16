@@ -40,6 +40,11 @@ html p{
   font-weight: normal;
 }
 
+.areaDos li{
+  list-style-type: circle;
+  font-size: 18px !important;
+}
+
 
 
 
