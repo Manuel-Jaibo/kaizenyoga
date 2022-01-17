@@ -32,7 +32,7 @@
         <!-- Todo Meditación -->
         <% for(i=0; i < meditacion.length; i++) { %>
           <div id="myBtn" class="padreArticulo">
-            <img src="<%=meditacion[i].imagen%>" width="100%"> </img>
+            <img loading="lazy" src="<%=meditacion[i].imagen%>" width="100%"> </img>
             <h2><%=meditacion[i].titulo%></h2>
             <p>$ <%=meditacion[i].precio%> mxn </p>
               <a href="/meditacion/<%=meditacion[i].url%>">

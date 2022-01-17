@@ -149,6 +149,51 @@ var meditacion = [
         variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
         variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
     },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Banco de madera grande entintado',
+        url: 'banco-de-madera-grande-entintado',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Banco de madera estándar natural con cojín',
+        url: 'banco-de-madera-estandar-natural-con-cojin',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Banco de madera estándar entintado con cojín',
+        url: 'banco-de-madera-estandar-entintado-con-cojin',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Banco de madera grande natural con cojín',
+        url: 'banco-de-madera-grande-natural-con-cojin',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Banco de madera grande entintado con cojín',
+        url: 'banco-de-madera-grande-entintado-con-cojin',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
 ];
 
 
@@ -373,7 +418,67 @@ route.get('/banco-de-madera-grande-natural', function (req, res) {
 
 
 
+//Obtener Banco de madera grande entintado > meditacion
+const bancoDeMaderaGrandeEntintado = meditacion.find(bancoDeMaderaGrandeEntintado => 
+    bancoDeMaderaGrandeEntintado.titulo === 'Banco de madera grande entintado');
+//Ruta para /meditacion/banco-de-madera-grande-entintado
+route.get('/banco-de-madera-grande-entintado', function (req, res) {
+    res.render("pages/bancoDeMaderaGrandeEntintado",
+        { bancoDeMaderaGrandeEntintado: bancoDeMaderaGrandeEntintado })
+}
+);
 
+
+
+
+//Obtener Banco de madera estándar natural con cojín > meditacion
+const bancoDeMaderaEstandarNaturalConCojin = meditacion.find(bancoDeMaderaEstandarNaturalConCojin => 
+    bancoDeMaderaEstandarNaturalConCojin.titulo === 'Banco de madera estándar natural con cojín');
+//Ruta para /meditacion/banco-de-madera-natural-con-cojin
+route.get('/banco-de-madera-estandar-natural-con-cojin', function (req, res) {
+    res.render("pages/bancoDeMaderaEstandarNaturalConCojin",
+        { bancoDeMaderaEstandarNaturalConCojin: bancoDeMaderaEstandarNaturalConCojin })
+}
+);
+
+
+
+
+//Obtener Banco de madera estándar entintado con cojín > meditacion
+const bancoDeMaderaEstandarEntintadoConCojin = meditacion.find(bancoDeMaderaEstandarEntintadoConCojin => 
+    bancoDeMaderaEstandarEntintadoConCojin.titulo === 'Banco de madera estándar entintado con cojín');
+//Ruta para /meditacion/banco-de-madera-entintado-con-cojin
+route.get('/banco-de-madera-estandar-entintado-con-cojin', function (req, res) {
+    res.render("pages/bancoDeMaderaEstandarEntintadoConCojin",
+        { bancoDeMaderaEstandarEntintadoConCojin: bancoDeMaderaEstandarEntintadoConCojin })
+}
+);
+
+
+
+
+//Obtener Banco de madera grande natural con cojín > meditacion
+const bancoDeMaderaGrandeNaturalConCojin = meditacion.find(bancoDeMaderaGrandeNaturalConCojin => 
+    bancoDeMaderaGrandeNaturalConCojin.titulo === 'Banco de madera grande natural con cojín');
+//Ruta para /meditacion/banco-de-madera-grande-natural-con-cojin
+route.get('/banco-de-madera-grande-natural-con-cojin', function (req, res) {
+    res.render("pages/bancoDeMaderaGrandeNaturalConCojin",
+        { bancoDeMaderaGrandeNaturalConCojin: bancoDeMaderaGrandeNaturalConCojin })
+}
+);
+
+
+
+
+//Obtener Banco de madera grande entintado con cojín > meditacion
+const bancoDeMaderaGrandeEntintadoConCojin = meditacion.find(bancoDeMaderaGrandeEntintadoConCojin => 
+    bancoDeMaderaGrandeEntintadoConCojin.titulo === 'Banco de madera grande entintado con cojín');
+//Ruta para /meditacion/banco-de-madera-grande-entintado-con-cojin
+route.get('/banco-de-madera-grande-entintado-con-cojin', function (req, res) {
+    res.render("pages/bancoDeMaderaGrandeEntintadoConCojin",
+        { bancoDeMaderaGrandeEntintadoConCojin: bancoDeMaderaGrandeEntintadoConCojin })
+}
+);
 
 
 
