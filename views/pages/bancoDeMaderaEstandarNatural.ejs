@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco De Madera Estándar Natural</title>
+
+    <!-- Inicia enlace para CSS Zoom -->
+    <link rel="stylesheet" href="../css/cssZoom.css" />
+    <!-- Inicia enlace para CSS Zoom -->
+
+  <!-- Inicia Head (CSS General, Tipografía y Fontawesome para íconos)-->
+  <%- include('../partials/head.ejs') %>
+    <!-- Fin Head (CSS General, Tipografía y Fontawesome para íconos)-->
+
+    <!-- Inicia enlace para CSS Tienda -->
+    <link rel="stylesheet" href="../css/cssTienda.css" />
+    <!-- Inicia enlace para CSS Tienda -->
+
+    <!-- Inicia enlace para CSS Articulos -->
+    <link rel="stylesheet" href="../css/cssArticulos.css" />
+    <!-- Inicia enlace para CSS Articulos -->
+
+    
+</head>
+<body class="tienda">
+  <!-- Inicia Barra superior-->
+  <%- include('../partials/barraSuperior.ejs') %>
+    <!-- Fin Barra superior-->
+    
+    <header>
+      <%- include('../partials/header.ejs') %>
+  </header>
+  
+  <div class="principal">
+    <div class="area">
+      <% if (bancoDeMaderaEstandarNatural) { %>
+      <div class="exzoom" id="exzoom">
+        <div class="exzoom_img_box">
+          <ul class="exzoom_img_ul">
+            <li>
+              <img class="misterio" src="<%=bancoDeMaderaEstandarNatural.imagen%>"/>
+            </li>
+            <li>
+              <img src="<%=bancoDeMaderaEstandarNatural.imagen2%>"/>
+            </li>
+            <li>
+              <img src="<%=bancoDeMaderaEstandarNatural.imagen3%>"/>
+            </li>
+            <li>
+              <img src="<%=bancoDeMaderaEstandarNatural.variante%>"/>
+            </li>
+            <li>
+              <img src="<%=bancoDeMaderaEstandarNatural.variante2%>"/>
+            </li>
+            <li>
+              <img src="<%=bancoDeMaderaEstandarNatural.variante3%>"/>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Barra de navegación Carrusel -->
+      <div class="exzoom_nav"></div>
+  
+        <!-- Botones de navegación -->
+        <p class="exzoom_btn">
+            <a href="javascript:void(0);" class="exzoom_prev_btn"> < </a>
+            <a href="javascript:void(0);" class="exzoom_next_btn"> > </a>
+          </p>
+      </div>
+      <% }  %>
+    </div>
+  
+  
+    <div class="areaDos">
+      <h1><%=bancoDeMaderaEstandarNatural.titulo%></h1>
+      <span>$ <%=bancoDeMaderaEstandarNatural.precio%> mxn</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cumque temporibus consequuntur aut repellat culpa eligendi nam similique aperiam vero doloremque officia alias quibusdam numquam, adipisci velit nesciunt? Eligendi, illo.</p>
+      <br>
+      <!-- <p class="heartbeat">Coloca el cursor sobre la imagen para zoom</p> -->
+      <h2>Características:</h2>
+        <li>alguna característica</li>
+        <li>alguna característica</li>
+        <li>alguna característica</li>
+        <li>alguna característica</li>
+
+      <br>
+      <h2>Medidas:</h2>
+        <li>algún tamaño</li>
+      
+      <br>
+      <h6>*Hecho en México por artesanos mexicanos.</h6>
+    
+      <h2>Selecciona tu color favorito y añade al carrito</h2>
+        <div id='product-component-1640765349865'></div>
+    </div>
+  
+  </div>
+
+
+
+    <footer>
+      <%- include('../partials/footer.ejs') %>
+    </footer>
+
+
+<!-- Inicia Scripts Zoom -->
+    <%- include('../resources/scriptZoom.ejs') %>
+<!-- Fin Scripts Zoom -->
+
+
+<!-- Shopify Producto -->
+
+
+</body>
+
+</html>

@@ -77,6 +77,78 @@ var meditacion = [
         variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
         variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
     },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Funda para zafu',
+        url: 'funda-para-zafu',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Cascarilla de café para rellenar zafu',
+        url: 'cascarilla-de-cafe-para-rellenar-zafu',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Sabutón',
+        url: 'sabuton',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Sabutón Pro',
+        url: 'sabuton-pro',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Zafu Pro redondo',
+        url: 'zafu-pro-redondo',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Banco de madera estándar natural',
+        url: 'banco-de-madera-estandar-natural',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Banco de madera estándar entintado',
+        url: 'banco-de-madera-estandar-entintado',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Banco de madera grande natural',
+        url: 'banco-de-madera-grande-natural',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
 ];
 
 
@@ -193,6 +265,113 @@ route.get('/zafu-infantil', function (req, res) {
         { zafuInfantil: zafuInfantil })
 }
 );
+
+
+
+
+//Obtener Funda para zafu > meditacion
+const fundaParaZafu = meditacion.find(fundaParaZafu => 
+    fundaParaZafu.titulo === 'Funda para zafu');
+//Ruta para /meditacion/funda-para-zafu
+route.get('/funda-para-zafu', function (req, res) {
+    res.render("pages/fundaParaZafu",
+        { fundaParaZafu: fundaParaZafu })
+}
+);
+
+
+
+
+//Obtener Venta de cascarilla de café para rellenar zafu > meditacion
+const rellenoCascarilla = meditacion.find(rellenoCascarilla => 
+    rellenoCascarilla.titulo === 'Cascarilla de café para rellenar zafu');
+//Ruta para /meditacion/cascarilla-de-cafe-para-rellenar-zafu
+route.get('/cascarilla-de-cafe-para-rellenar-zafu', function (req, res) {
+    res.render("pages/cascarillaCafeRelleno",
+        { rellenoCascarilla: rellenoCascarilla })
+}
+);
+
+
+
+
+//Obtener Sabutón > meditacion
+const sabuton = meditacion.find(sabuton => 
+    sabuton.titulo === 'Sabutón');
+//Ruta para /meditacion/sabuton
+route.get('/sabuton', function (req, res) {
+    res.render("pages/sabuton",
+        { sabuton: sabuton })
+}
+);
+
+
+
+
+//Obtener Sabutón Pro > meditacion
+const sabutonPro = meditacion.find(sabutonPro => 
+    sabutonPro.titulo === 'Sabutón Pro');
+//Ruta para /meditacion/sabuton-pro
+route.get('/sabuton-pro', function (req, res) {
+    res.render("pages/sabutonPro",
+        { sabutonPro: sabutonPro })
+}
+);
+
+
+
+
+//Obtener Zafu Pro redondo > meditacion
+const zafuProRedondo = meditacion.find(zafuProRedondo => 
+    zafuProRedondo.titulo === 'Zafu Pro redondo');
+//Ruta para /meditacion/zafu-pro-redondo
+route.get('/zafu-pro-redondo', function (req, res) {
+    res.render("pages/zafuProRedondo",
+        { zafuProRedondo: zafuProRedondo })
+}
+);
+
+
+
+
+//Obtener Banco de madera estándar natural > meditacion
+const bancoDeMaderaEstandarNatural = meditacion.find(bancoDeMaderaEstandarNatural => 
+    bancoDeMaderaEstandarNatural.titulo === 'Banco de madera estándar natural');
+//Ruta para /meditacion/banco-de-madera-estandar-natural
+route.get('/banco-de-madera-estandar-natural', function (req, res) {
+    res.render("pages/bancoDeMaderaEstandarNatural",
+        { bancoDeMaderaEstandarNatural: bancoDeMaderaEstandarNatural })
+}
+);
+
+
+
+
+//Obtener Banco de madera estándar entintado > meditacion
+const bancoDeMaderaEstandarEntintado = meditacion.find(bancoDeMaderaEstandarEntintado => 
+    bancoDeMaderaEstandarEntintado.titulo === 'Banco de madera estándar entintado');
+//Ruta para /meditacion/banco-de-madera-estandar-entintado
+route.get('/banco-de-madera-estandar-entintado', function (req, res) {
+    res.render("pages/bancoDeMaderaEstandarEntintado",
+        { bancoDeMaderaEstandarEntintado: bancoDeMaderaEstandarEntintado })
+}
+);
+
+
+
+
+//Obtener Banco de madera grande natural > meditacion
+const bancoDeMaderaGrandeNatural = meditacion.find(bancoDeMaderaGrandeNatural => 
+    bancoDeMaderaGrandeNatural.titulo === 'Banco de madera grande natural');
+//Ruta para /meditacion/banco-de-madera-grande-natural
+route.get('/banco-de-madera-grande-natural', function (req, res) {
+    res.render("pages/bancoDeMaderaGrandeNatural",
+        { bancoDeMaderaGrandeNatural: bancoDeMaderaGrandeNatural })
+}
+);
+
+
+
 
 
 
