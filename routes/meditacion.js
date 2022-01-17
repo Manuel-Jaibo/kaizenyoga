@@ -194,6 +194,24 @@ var meditacion = [
         variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
         variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
     },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Silla de meditación tipo zen',
+        url: 'silla-de-meditacion-tipo-zen',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
+    {
+        colecciones: 'meditacion',
+        titulo: 'Silla de madera meditación',
+        url: 'silla-de-madera-meditacion',
+        precio: 1500,
+        imagen: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates.jpg?v=1640840721',
+        variante: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-rosa.jpg?v=1640840733',
+        variante2: 'https://cdn.shopify.com/s/files/1/0555/2766/9898/files/rodillo-para-pilates-colores.jpg?v=1640840895',
+    },
 ];
 
 
@@ -480,6 +498,31 @@ route.get('/banco-de-madera-grande-entintado-con-cojin', function (req, res) {
 }
 );
 
+
+
+
+//Obtener Silla de meditación tipo zen > meditacion
+const sillaDeMeditacionTipoZen = meditacion.find(sillaDeMeditacionTipoZen => 
+    sillaDeMeditacionTipoZen.titulo === 'Silla de meditación tipo zen');
+//Ruta para /meditacion/silla-de-meditacion-tipo-zen
+route.get('/silla-de-meditacion-tipo-zen', function (req, res) {
+    res.render("pages/sillaDeMeditacionTipoZen",
+        { sillaDeMeditacionTipoZen: sillaDeMeditacionTipoZen })
+}
+);
+
+
+
+
+//Obtener Silla de madera meditación > meditacion
+const sillaDeMaderaMeditacion = meditacion.find(sillaDeMaderaMeditacion => 
+    sillaDeMaderaMeditacion.titulo === 'Silla de madera meditación');
+//Ruta para /meditacion/silla-de-madera-meditacion
+route.get('/silla-de-madera-meditacion', function (req, res) {
+    res.render("pages/sillaDeMaderaMeditacion",
+        { sillaDeMaderaMeditacion: sillaDeMaderaMeditacion })
+}
+);
 
 
 

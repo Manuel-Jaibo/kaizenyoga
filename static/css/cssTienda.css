@@ -54,6 +54,7 @@ html p{
 
 .padreArticulo{
   border-style:none;
+  margin: 10px;
   width: 30%;
   box-shadow: 0px 0px 4px 1px #564693;
   background-color: #ffffff;

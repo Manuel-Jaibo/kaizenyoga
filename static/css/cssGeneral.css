@@ -59,6 +59,20 @@ li a {
   color: #000000;
 }
 
+#kc{
+  display: none;
+  background-color: #ffffffff;
+  position: absolute;
+}
+
+.menuMeditacion li a{
+  font-size: 16px;
+}
+
+.menuMeditacion li{
+  margin-bottom: -10px;
+}
+
 body button{
   margin: 20px 0 30px 0;
   border: none;

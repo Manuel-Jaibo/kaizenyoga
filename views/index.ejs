@@ -80,6 +80,24 @@
         <footer>
             <%- include('./partials/footer.ejs') %>
           </footer>
+
+          <script text="text/javascript">
+          function modifyText() {
+                const t2 = document.getElementById("kc");
+                t2.style.display = "block";
+                if (t2.style.display == "block") {
+                    t2.style.display = "none";
+                } else {
+                    t2.style.display = "block";
+                }
+                }
+
+                // Add event listener to table
+                const el = document.getElementById("kc");
+                el.addEventListener("click", modifyText, false);
+          
+            </script>
+
 </body>
 
 </html>
