@@ -1,7 +1,11 @@
 
-html{
+/* html{
   display: none;
-} 
+}  */
+
+html{
+  scroll-behavior: smooth;
+}
 
 .selector-for-some-widget {
   box-sizing: content-box;
@@ -59,10 +63,19 @@ li a {
   color: #000000;
 }
 
-#kc{
+#menuMeditacion2{
   display: none;
+  width: 100%;
   background-color: #ffffffff;
-  position: absolute;
+}
+
+.menuActive{
+  display: block;
+  position: relative;
+}
+
+.dropdown-menu{
+  width: 900px !important;
 }
 
 .menuMeditacion li a{

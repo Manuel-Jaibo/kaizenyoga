@@ -2,10 +2,12 @@
 <html lang="es">
 
 <head>
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kaizen Yoga 2022</title>
+
 
     <!-- Inicia Head (CSS General, Tipografía y Fontawesoma para íconos)-->
         <%- include('./partials/head.ejs') %>
@@ -23,6 +25,9 @@
         <header>
             <%- include('./partials/header.ejs') %>
         </header>
+        
+        <!-- Submenú Meditación -->
+        <%- include('./partials/submenuMeditacion.ejs') %>
 
         <div style="height: 550px;" 
             class="bannerHome">
@@ -79,24 +84,9 @@
 
         <footer>
             <%- include('./partials/footer.ejs') %>
-          </footer>
-
-          <script text="text/javascript">
-          function modifyText() {
-                const t2 = document.getElementById("kc");
-                t2.style.display = "block";
-                if (t2.style.display == "block") {
-                    t2.style.display = "none";
-                } else {
-                    t2.style.display = "block";
-                }
-                }
-
-                // Add event listener to table
-                const el = document.getElementById("kc");
-                el.addEventListener("click", modifyText, false);
-          
-            </script>
+        </footer>
+            
+            
 
 </body>
 

@@ -1,6 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script defer>
+    <script>
       (function ($, window) {
     let ele = null,
         exzoom_img_box = null,
@@ -435,7 +435,7 @@
         let new_position = -boxWidth * imgIndex;
         //animate stop() ,
         new_position = checkNewPositionLimit(new_position);
-        exzoom_img_ul.stop().animate({"left": new_position}, 500);
+        exzoom_img_ul.stop().animate({"left": new_position}, 10); //aquí eran 5000
         //
         previewImg(imgArr[imgIndex]);
     }
@@ -590,7 +590,7 @@
             let top = (g.navWidth - (g.navHeight * img_scale)) / 2;
             exzoom_nav_inner.append(`<span><img src="${src}" height="${g.navHeight}" style="left:${top}px;"/></span>`);
         }
-
+   //antes era ${g.navHeight}
         return res;
     }
 

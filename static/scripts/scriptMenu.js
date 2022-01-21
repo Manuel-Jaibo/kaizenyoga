@@ -1,10 +1,9 @@
 function obtenerMenuMeditacion(){
-    const meditacionMenuu  = document.querySelector('.menuMeditacion');
-    console.log(meditacionMenuu)
-    meditacionMenuu.style.display = "flex";
+    const medintacionMenuu  = document.getElementsByClassName('menuMeditacion');
+    medintacionMenuu.style.display = "flex";
 }
 
 
-const meditacionMenu  = document.querySelector('.menuMeditacion');
+const meditacionMenu  = document.getElementsByClassName('menuMeditacion');
 meditacionMenu.addEventListener("click", obtenerMenuMeditacion, false);
 

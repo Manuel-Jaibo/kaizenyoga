@@ -8,31 +8,34 @@
     <title>Zafu Redondo Liso Con Diseño</title>
 
     <!-- Inicia enlace para CSS Zoom -->
-    <link rel="stylesheet" href="../css/cssZoom.css" />
+      <link rel="stylesheet" href="../css/cssZoom.css" />
     <!-- Inicia enlace para CSS Zoom -->
 
-  <!-- Inicia Head (CSS General, Tipografía y Fontawesome para íconos)-->
-  <%- include('../partials/head.ejs') %>
+    <!-- Inicia Head (CSS General, Tipografía y Fontawesome para íconos)-->
+      <%- include('../partials/head.ejs') %>
     <!-- Fin Head (CSS General, Tipografía y Fontawesome para íconos)-->
 
     <!-- Inicia enlace para CSS Tienda -->
-    <link rel="stylesheet" href="../css/cssTienda.css" />
+      <link rel="stylesheet" href="../css/cssTienda.css" />
     <!-- Inicia enlace para CSS Tienda -->
 
     <!-- Inicia enlace para CSS Articulos -->
-    <link rel="stylesheet" href="../css/cssArticulos.css" />
+      <link rel="stylesheet" href="../css/cssArticulos.css" />
     <!-- Inicia enlace para CSS Articulos -->
 
     
 </head>
 <body class="tienda">
   <!-- Inicia Barra superior-->
-  <%- include('../partials/barraSuperior.ejs') %>
-    <!-- Fin Barra superior-->
+    <%- include('../partials/barraSuperior.ejs') %>
+  <!-- Fin Barra superior-->
     
-    <header>
-      <%- include('../partials/header.ejs') %>
+  <header>
+    <%- include('../partials/header.ejs') %>
   </header>
+
+  <!-- Submenú Meditación -->
+  <%- include('../partials/submenuMeditacion.ejs') %>
   
   <div class="principal">
     <div class="area">
@@ -41,7 +44,7 @@
         <div class="exzoom_img_box">
           <ul class="exzoom_img_ul">
             <li>
-              <img class="misterio" src="<%=zafuRedondoLisoConDiseno.imagen%>"/>
+              <img src="<%=zafuRedondoLisoConDiseno.imagen%>"/>
             </li>
             <li>
               <img src="<%=zafuRedondoLisoConDiseno.imagen2%>"/>
