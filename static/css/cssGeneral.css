@@ -1,15 +1,7 @@
 
-html{
+/* html{
   display: none;
-} 
-
-html{
-  scroll-behavior: smooth;
-}
-
-.selector-for-some-widget {
-  box-sizing: content-box;
-}
+}  */
 
 * {
   margin: 0;
@@ -63,29 +55,6 @@ li a {
   color: #000000;
 }
 
-#menuMeditacion2{
-  display: none;
-  width: 100%;
-  background-color: #ffffffff;
-}
-
-.menuActive{
-  display: block;
-  position: relative;
-}
-
-.dropdown-menu{
-  width: 900px !important;
-}
-
-.menuMeditacion li a{
-  font-size: 16px;
-}
-
-.menuMeditacion li{
-  margin-bottom: -10px;
-}
-
 body button{
   margin: 20px 0 30px 0;
   border: none;
@@ -133,12 +102,36 @@ li {
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-  position: sticky;
+  width: 100%;
 }
+
+.navegacion{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.subNavegacion{
+  width: 100%;
+  display: flex;
+  background-color: green;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+.subNavegacion div h2{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.subNavegacion div li{
+  font-size: 20px;
+}
+
+/* .listaMeditacion,
+.listaYoga{
+  display: none;
+} */
 
 ul{
     display: flex;
@@ -192,7 +185,3 @@ footer div{
 .footerSocial i{
   padding: 0 3%;
 }
-
-
-
-
