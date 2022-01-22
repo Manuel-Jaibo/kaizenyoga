@@ -128,10 +128,10 @@ header {
   font-size: 20px;
 }
 
-/* .listaMeditacion,
+.listaMeditacion,
 .listaYoga{
   display: none;
-} */
+}
 
 ul{
     display: flex;
