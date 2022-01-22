@@ -10,10 +10,10 @@
   position: relative;
 }
 
-/* .exzoom .exzoom_img_box .exzoom_main_img {
+.exzoom .exzoom_img_box .exzoom_main_img {
   display: block;
   width: 100%;
-} */
+}
 
 /* Para cuadro gris que aparece al poner el cursor sobre la imagen */
 .exzoom .exzoom_img_box span {

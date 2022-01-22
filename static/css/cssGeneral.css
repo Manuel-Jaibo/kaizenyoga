@@ -120,12 +120,15 @@ header {
 }
 
 .subNavegacion div h2{
-  font-size: 20px;
+  font-size: 22px !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
   letter-spacing: 1px;
 }
 
-.subNavegacion div li{
-  font-size: 20px;
+.clicMeditacion,
+.clicYoga{
+  cursor: pointer;
 }
 
 .listaMeditacion,
