@@ -118,6 +118,12 @@ header {
   justify-content:space-evenly;
 }
 
+.titulos-menu{
+  font-size: 20px !important;
+  font-weight: bold;
+  list-style: none;
+}
+
 .subNavegacion div h2{
   font-size: 22px !important;
   font-family: "Poppins", sans-serif;
@@ -125,7 +131,8 @@ header {
   letter-spacing: 1px;
 }
 
-.fa, .fas{
+.fa, 
+.fas{
   font-size: 17px;
   font-weight: 200;
   padding: 5px;
@@ -134,7 +141,6 @@ header {
 .clicMeditacion,
 .clicYoga{
   cursor: pointer;
-  
   background-color: #ffffff;
 }
 
@@ -145,7 +151,15 @@ header {
 
 .listaMeditacionDiv{
   display: flex;
-  background-color: #ffffff;
+  justify-content: space-evenly;
+}
+
+.listaMeditacionDiv div{
+  margin: 0 10px;
+}
+
+.listaMeditacionDiv div:hover{
+  background-color: #eeeeee;
 }
 
 .subNavegacion div ul li a{
