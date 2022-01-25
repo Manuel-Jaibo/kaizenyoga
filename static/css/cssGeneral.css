@@ -1,7 +1,7 @@
 
-html{
+/* html{
   display: none;
-} 
+}  */
 
 * {
   margin: 0;
@@ -114,8 +114,7 @@ header {
 .subNavegacion{
   width: 100%;
   display: flex;
-  background-color: green;
-  align-items: center;
+  align-items: top;
   justify-content:space-evenly;
 }
 
@@ -126,14 +125,38 @@ header {
   letter-spacing: 1px;
 }
 
+.fa, .fas{
+  font-size: 17px;
+  font-weight: 200;
+  padding: 5px;
+}
+
 .clicMeditacion,
 .clicYoga{
   cursor: pointer;
+  
+  background-color: #ffffff;
 }
 
 .listaMeditacion,
 .listaYoga{
   display: none;
+}
+
+.listaMeditacionDiv{
+  display: flex;
+  background-color: #ffffff;
+}
+
+.subNavegacion div ul li a{
+  font-size: 17px;
+}
+
+.listaMeditacion li,
+.listaYoga li{
+  list-style: circle;
+  list-style-position: inherit;
+  font-size: 13px;
 }
 
 ul{
@@ -144,6 +167,10 @@ ul{
 ul li a{
     margin: 0 10px;
     letter-spacing: 1px;
+}
+
+ul li a:hover{
+  color: #8E4091;
 }
 
 .divIconos{
