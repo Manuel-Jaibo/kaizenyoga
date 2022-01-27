@@ -9,6 +9,27 @@
   box-sizing: border-box;
 }
 
+.ps{
+  width: 270px;
+}
+
+.messi{
+  width: 270px;
+}
+
+.messi:hover{
+  transition: ease(2,2);
+  transform: scale(3,3);
+  -webkit-transform: scale(3,3);
+  -moz-transform: scale(3,3);
+  -ms-transform: scale(3,3);
+  -o-transform: scale(3,3);
+  -webkit-transition: ease(2,2);
+  -moz-transition: ease(2,2);
+  -ms-transition: ease(2,2);
+  -o-transition: ease(2,2);
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #000000;
