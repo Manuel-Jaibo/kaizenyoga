@@ -23,7 +23,11 @@
     <link rel="stylesheet" href="../css/cssArticulos.css" />
     <!-- Inicia enlace para CSS Articulos -->
 
-    
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 <body class="tienda">
   <!-- Inicia Barra superior-->
@@ -74,15 +78,19 @@
     </div>
 
 
-    <div class="ps">
-      <img width="270px" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-uno.jpg?v=1643083117" alt="" srcset="">
-      <img width="270px" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-dos.jpg?v=1643083117" alt="" srcset="">
-      <img width="270px" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-tres.jpg?v=1643083117" alt="" srcset="">
-      <img width="270px" lazy="load" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-cuatro.jpg?v=1643083117" alt="" srcset="">
-      <img width="270px" lazy="load" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-amarillo.jpg?v=1643083479" alt="" srcset="">
-      <img width="270px" lazy="load" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-azul.jpg?v=1643083479" alt="" srcset="">
-      <img width="270px" lazy="load" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-azul-claro.jpg?v=1643083480" alt="" srcset="">
-      <img width="270px" lazy="load" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-cafe.jpg?v=1643083480" alt="" srcset="">
+    <div class="fade">
+      <div>
+        <img width="270px" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-uno.jpg?v=1643083117" alt="" srcset="">
+      </div>
+      <div>
+        <img width="270px" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-dos.jpg?v=1643083117" alt="" srcset="">
+      </div>
+      <div>
+        <img width="270px" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-tres.jpg?v=1643083117" alt="" srcset="">
+      </div>
+      <div>
+        <img width="270px" lazy="load" class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-azul.jpg?v=1643083479" alt="" srcset="">
+      </div>
     </div>
   
   
@@ -221,6 +229,22 @@
 /*]]>*/
 </script>
 
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.fade').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
+  });
+</script>
 
 </body>
 
