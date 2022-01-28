@@ -23,48 +23,35 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-
-
 </head>
 <body class="tienda">
   <!-- Inicia Barra superior-->
-  <%- include('../partials/barraSuperior.ejs') %>
-    <!-- Fin Barra superior-->
+    <%- include('../partials/barraSuperior.ejs') %>
+  <!-- Fin Barra superior-->
     
-    <header>
-      <%- include('../partials/header.ejs') %>
+  <header>
+    <%- include('../partials/header.ejs') %>
   </header>
   
 <div class="principal">
-    <div class="area">
-      <% if (zafuRedondoLiso) { %>
-        <div class="ps fade">
-          <div>
-            <img class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-uno.jpg?v=1643083117" alt="" srcset="">
-          </div>
-          <div>
-            <img class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-dos.jpg?v=1643083117" alt="" srcset="">
-          </div>
-          <div>
-            <img class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-tres.jpg?v=1643083117" alt="" srcset="">
-          </div>
-          <div>
-            <img class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-azul.jpg?v=1643083479" alt="" srcset="">
-          </div>
-        </div>
-      <% }  %>
+    <div class="area fade">
+      <div>
+        <img class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-dos.jpg?v=1643083117" alt="" srcset="">
+      </div>
+      <div>
+        <img class="messi" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-tres.jpg?v=1643083117" alt="" srcset="">
+      </div>
     </div>
   
     <div class="areaDos">
-      <h1><%=zafuRedondoLiso.titulo%></h1>
-      <span>$ <%=zafuRedondoLiso.precio%> mxn</span>
+      <h1>afuRedondoLiso.titulo</h1>
+      <span> mxn</span>
       <br>
       <p>Selecciona tu color favorito y añade al carrito</p>
         <div id='product-component-1643084567853'></div>
       <br>
       <p>El Zafu es una herramienta útil para la práctica de la meditación ya que te permite mantener la espalda recta, tener un mejor equilibrio manteniendo relajados los músculos logrando alcanzar una meditación y respiración más profundas.</p>
       <br>
-      <!-- <p class="heartbeat">Coloca el cursor sobre la imagen para zoom</p> -->
       <h2>Características:</h2>
         <li>Fabricado con tergal (algodón y poliéster).</li>
         <li>Relleno de cascarilla de café.</li>
@@ -79,10 +66,8 @@
       <h6>*Hecho en México por artesanos mexicanos.</h6>
     
     </div>
-  
 </div>
 
-  
 
     <footer>
       <%- include('../partials/footer.ejs') %>
@@ -95,23 +80,24 @@
 
 
 
-
-
 <!--jquery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--CDN-->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+
   <script type="text/javascript">
     $(function(){
       $('.fade').slick({
-  dots: true,
-  infinite: false,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear'
-});
-});
+          dots: true,
+          infinite: true,
+          speed: 700,
+          autoplay:true,
+          autoplaySpeed: 2000,
+          arrows:false,
+          slidesToShow: 1
+       });
+    });
   </script>
 
 </body>

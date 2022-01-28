@@ -8,22 +8,59 @@ html p{
 }
 
 .principal{
+  background-color: red;
+  width: 100%;
   margin-top: 0px;
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 5% 15%;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 5% 10%;
 }
 
 .area {
-  width: 40%;
+  width: 50%;
+  height: min-content;
+  background-color: green;
+}
+
+.area div{
+  width: 150px;
+  height: 150px;
+}
+
+.messi{
+  width: 100%;
+}
+
+/* .ps{
+  width: 100%;
+  background-image: url("../media/fondoArticulos.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+
+/* .ps div{
+  width: 400px;
+} */
+
+
+/* .slick-prev,
+.slick-next{
+  display: none !important;
+} */
+
+.messi:hover{
+  transform: scale(1.8, 1.8);
+  -webkit-transform: scale(1.8, 1.8);
+  -moz-transform: scale(1.8, 1.8);
+  -ms-transform: scale(1.8, 1.8);
+  -o-transform: scale(1.8, 1.8);
 }
 
 .areaDos{
-  width: 60%;
+  width: 50%;
   text-align: left;
-  padding-left: 70px;
+  padding-left: 5%;
 }
 
 .areaDos h1{
