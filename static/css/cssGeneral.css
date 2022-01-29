@@ -14,7 +14,7 @@ body {
   color: #000000;
 }
 
-body h1 {
+h1 {
   font-size: 45px;
 }
 
@@ -72,7 +72,7 @@ body button{
 
 body button:hover{
   background: transparent;
-  padding: 8px 50px;
+  padding: 8px 30px;
 }
 
 body a button{
@@ -86,15 +86,15 @@ body a button:hover{
 }
 
 .barraSuperior{
-    text-align: center;
-    color: #ffffffff;
-    padding: 10px;
-    background-color: #564693;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #ffffffff;
+  padding: 10px;
+  background-color: #564693;
+  margin-bottom: 20px;
 }
 
 .barraSuperior p{
-    font-size: 15px;
+  font-size: 15px;
 }
 
 li {

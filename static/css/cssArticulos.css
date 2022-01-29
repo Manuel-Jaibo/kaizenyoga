@@ -1,14 +1,18 @@
-
-.areaDos span{
-  font-size: 25px;
-}
-
 html p{
   font-size: 20px;
 }
 
+body button{
+  margin: 0 5px;
+  padding: 4px 10px;
+  background-color: transparent;
+}
+
+body button:hover{
+  padding: 0 8px;
+}
+
 .principal{
-  background-color: red;
   width: 100%;
   margin-top: 0px;
   display: flex;
@@ -16,51 +20,68 @@ html p{
   padding: 5% 10%;
 }
 
+.slick-prev{
+  display: none !important;
+}
+
 .area {
   width: 50%;
+  padding: 1%;
   height: min-content;
-  background-color: green;
 }
 
 .area div{
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  padding: 10px 0;
 }
 
-.messi{
+.caso img:hover{
+  transform: scale(8);
+  -webkit-transform: scale(8);
+  -moz-transform: scale(8);
+  -ms-transform: scale(8);
+  -o-transform: scale(8);
+}
+
+.area div img{
+  display: block;
+  margin: auto;
+}
+
+.multiple-items{
+  padding: 10px 0;
   width: 100%;
 }
 
-/* .ps{
-  width: 100%;
-  background-image: url("../media/fondoArticulos.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-} */
+.multiple-items img{
+  width: 70px !important;
+}
 
-/* .ps div{
-  width: 400px;
-} */
+.area div img:hover{
+  transition: all 300ms;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -o-transition: all 300ms;
+  transform: scale(2, 2);
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  -ms-transform: scale(2, 2);
+  -o-transform: scale(2, 2);
+}
 
-
-/* .slick-prev,
-.slick-next{
-  display: none !important;
-} */
-
-.messi:hover{
-  transform: scale(1.8, 1.8);
-  -webkit-transform: scale(1.8, 1.8);
-  -moz-transform: scale(1.8, 1.8);
-  -ms-transform: scale(1.8, 1.8);
-  -o-transform: scale(1.8, 1.8);
+.multiple-items img:hover{
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 .areaDos{
   width: 50%;
   text-align: left;
-  padding-left: 5%;
+  padding-left: 1%;
 }
 
 .areaDos h1{
@@ -82,6 +103,6 @@ html p{
   font-size: 18px !important;
 }
 
-
-
-
+.areaDos span{
+  font-size: 25px;
+}

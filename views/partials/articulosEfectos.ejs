@@ -1,0 +1,28 @@
+<!--jquery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--CDN-->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- script para imagen de perspectiva -->
+  <script type="text/javascript">
+    $(function(){
+      $('.fade').slick({
+          dots: true,
+          infinite: true,
+          speed: 700,
+          autoplay:true,
+          autoplaySpeed: 2000,
+          arrows:false,
+          slidesToShow: 1
+       });
+    });
+  </script>
+
+<!-- script para imagen de variantes -->
+  <script>
+    $('.multiple-items').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
+  </script>

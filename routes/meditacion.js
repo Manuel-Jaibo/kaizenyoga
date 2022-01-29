@@ -286,7 +286,8 @@ const zafuMediaLuna = meditacion.find(zafuMediaLuna =>
 //Ruta para /meditacion/zafu-media-luna
 route.get('/zafu-media-luna', function (req, res) {
     res.render("pages/zafuMediaLuna",
-        { zafuMediaLuna: zafuMediaLuna })
+        { zafuMediaLuna: zafuMediaLuna,
+        zafuRedondoLisoConDiseno: zafuRedondoLisoConDiseno })
 }
 );
 
