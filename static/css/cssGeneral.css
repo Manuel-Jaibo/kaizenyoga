@@ -112,6 +112,7 @@ header {
 }
 
 .subNavegacion{
+
   width: 100%;
   display: flex;
   align-items: top;
@@ -149,18 +150,24 @@ header {
   display: none;
 }
 
-.listaMeditacionDiv{
+.listaMeditacion{
+  background-color: red;
+  width: 100%;
+}
+
+/* .listaMeditacionDiv{
+  display: none;
   display: flex;
   justify-content: space-evenly;
-}
+} */
 
-.listaMeditacionDiv div{
+/* .listaMeditacionDiv div{
   margin: 0 10px;
-}
+} */
 
-.listaMeditacionDiv div:hover{
+/* .listaMeditacionDiv div:hover{
   background-color: #eeeeee;
-}
+} */
 
 .subNavegacion div ul li a{
   font-size: 17px;
@@ -228,4 +235,23 @@ footer div{
 
 .footerSocial i{
   padding: 0 3%;
+}
+
+
+
+
+
+
+/* Nuevo menú del 29 enero */
+.imagen-titulo *{
+  display: block;
+}
+
+.listaMeditacionDiv{
+  background-color: purple;
+  display: none;
+}
+
+.listaMeditacionDiv:hover{
+  display: flex;
 }

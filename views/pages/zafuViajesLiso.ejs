@@ -5,114 +5,357 @@
   <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zafu Viajes Liso</title>
+    <title>Zafu Redondo Liso</title>
 
-    <!-- Inicia enlace para CSS Zoom -->
-    <link rel="stylesheet" href="../css/cssZoom.css" />
-    <!-- Inicia enlace para CSS Zoom -->
 
-  <!-- Inicia Head (CSS General, Tipografía y Fontawesome para íconos)-->
-  <%- include('../partials/head.ejs') %>
+    <!-- Inicia Head (CSS General, Tipografía y Fontawesome para íconos)-->
+      <%- include('../partials/head.ejs') %>
     <!-- Fin Head (CSS General, Tipografía y Fontawesome para íconos)-->
 
     <!-- Inicia enlace para CSS Tienda -->
-    <link rel="stylesheet" href="../css/cssTienda.css" />
+      <link rel="stylesheet" href="../css/cssTienda.css" />
     <!-- Inicia enlace para CSS Tienda -->
 
+
     <!-- Inicia enlace para CSS Articulos -->
-    <link rel="stylesheet" href="../css/cssArticulos.css" />
+      <link rel="stylesheet" href="../css/cssArticulos.css" />
     <!-- Inicia enlace para CSS Articulos -->
 
-    
+
+    <style>
+      .sectionpzm{
+        display: flex; 
+        justify-content: space-evenly; 
+        width: 100%;
+      }
+
+      .sectionpzmUno{
+        width: 50%; 
+        display:flex; 
+        flex-direction: column;
+      }
+
+      .sectionpzmUno img{
+        width: 300px;
+        display: block;
+        margin: auto;
+        float: right;
+      }
+
+      .sectionpzmUno img:hover{
+        transition: all(300ms);
+        transform: scale(2);
+      }
+
+      .sectionpzmDos{
+        width: 50%;
+      }
+
+      .pegajoso{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        position: sticky;
+        top: 0;
+        padding: 80px 0 0 0;
+      }
+
+      .pegajoso {
+        text-align: left;
+      }
+
+      .pegajoso h2{
+        font-size: 50px;
+        color: #8E4091;
+        font-weight: bolder;
+      }
+
+      .sectionpzmTres h2{
+        padding: 0 10%;
+        text-align: center;
+      }
+
+      .sectionpzmTres{
+        margin-top: 5%;
+        width: 100%;
+        padding: 2%;
+      }
+
+      #padrePadre{
+        display: flex;
+      }
+
+      .padreArticulo{
+        margin: 1%;
+        padding: 1% 3px;
+        text-align: center;
+        border-style:none;
+        box-shadow: 0px 0px 4px 1px #564693;
+        background-color: #ffffff;
+      }
+
+      .padreArticulo:hover{
+        transition: all 0.3s ease-out;
+        transform: scale(1.1);
+      }
+
+      .padreArticulo img{
+        width: 270px;
+      }
+
+      .padreArticulo h2 a{
+        font-size: 22px;
+        font-weight: normal;
+        color: purple;
+      }
+
+      .pegajoso .fab,
+      .pegajoso .fas{
+        font-size: 30px;
+      }
+
+      .sectionpzmCuatro{
+        padding: 1%;
+        margin: 10% 0 0 0;
+        color: #000000;
+        text-align: center;
+        background-color: #8e40917c;
+      }
+
+      .sectionpzmCuatro h2{
+        font-size: 30px;
+      }
+
+      .sectionpzmCuatro a button{
+        color: #000000;
+        margin: 1% 0;
+        padding: 0.5% 1%;
+      }
+
+      footer{
+        margin-top: 0;
+      }
+
+    </style>
+
 </head>
 <body class="tienda">
   <!-- Inicia Barra superior-->
-  <%- include('../partials/barraSuperior.ejs') %>
-    <!-- Fin Barra superior-->
+    <%- include('../partials/barraSuperior.ejs') %>
+  <!-- Fin Barra superior-->
     
-    <header>
-      <%- include('../partials/header.ejs') %>
+  <header>
+    <%- include('../partials/header.ejs') %>
   </header>
   
   <div class="principal">
-    <div class="area">
-      <% if (zafuViajesLiso) { %>
-      <div class="exzoom" id="exzoom">
-        <div class="exzoom_img_box">
-          <ul class="exzoom_img_ul">
-            <li>
-              <img class="misterio" src="<%=zafuViajesLiso.imagen%>"/>
-            </li>
-            <li>
-              <img src="<%=zafuViajesLiso.imagen2%>"/>
-            </li>
-            <li>
-              <img src="<%=zafuViajesLiso.imagen3%>"/>
-            </li>
-            <li>
-              <img src="<%=zafuViajesLiso.variante%>"/>
-            </li>
-            <li>
-              <img src="<%=zafuViajesLiso.variante2%>"/>
-            </li>
-            <li>
-              <img src="<%=zafuViajesLiso.variante3%>"/>
-            </li>
-          </ul>
-        </div>
-  
-        <!-- Barra de navegación Carrusel -->
-      <div class="exzoom_nav"></div>
-  
-        <!-- Botones de navegación -->
-        <p class="exzoom_btn">
-          <a href="javascript:void(0);" class="exzoom_prev_btn"> < </a>
-          <a href="javascript:void(0);" class="exzoom_next_btn"> > </a>
-        </p>
+    <div class="area fade">
+      <div>
+        <img loading="lazy" width="320px" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/1_opt.jpg?v=1643431894" alt="" srcset="">
       </div>
-      <% }  %>
+      <div>
+        <img loading="lazy" width="320px" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/2_opt.jpg?v=1643431894" alt="" srcset="">
+      </div>
+      <div>
+        <img loading="lazy" width="320px" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/3_opt.jpg?v=1643431894" alt="" srcset="">
+      </div>
+      <div>
+        <img loading="lazy" width="320px" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/4_opt.jpg?v=1643431894" alt="" srcset="">
+      </div>
     </div>
-  
   
     <div class="areaDos">
-      <h1><%=zafuViajesLiso.titulo%></h1>
-      <span>$ <%=zafuViajesLiso.precio%> mxn</span>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cumque temporibus consequuntur aut repellat culpa eligendi nam similique aperiam vero doloremque officia alias quibusdam numquam, adipisci velit nesciunt? Eligendi, illo.</p>
+      <h1>afuRedondoLiso.titulo</h1>
+      <span> mxn</span>
       <br>
-      <!-- <p class="heartbeat">Coloca el cursor sobre la imagen para zoom</p> -->
-      <h2>Características:</h2>
-        <li>alguna característica</li>
-        <li>alguna característica</li>
-        <li>alguna característica</li>
-        <li>alguna característica</li>
-
+      
+      <p>El Zafu es una herramienta útil para la práctica de la meditación ya que te permite mantener la espalda recta, tener un mejor equilibrio manteniendo relajados los músculos logrando alcanzar una meditación y respiración más profundas.</p>
       <br>
       <h2>Medidas:</h2>
-        <li>algún tamaño</li>
-      
+        <li>35 cm diámetro 16 cm de alto.</li>
+        <br>
+      <h2>Características:</h2>
+        <li>Fabricado con tergal (algodón y poliéster).</li>
+        <li>Relleno de cascarilla de café.</li>
+        <li>Funda interna de manta (para ajustar la altura deseada).</li>
+        <li>Práctica haza para su transportación.</li>
       <br>
-      <h6>*Hecho en México por artesanos mexicanos.</h6>
     
-      <h2>Selecciona tu color favorito y añade al carrito</h2>
-        <div id='product-component-1640765349865'></div>
     </div>
-  
   </div>
 
+  <hr>
+
+  <section class="sectionpzm">
+    <div class="sectionpzmUno">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-amarillo.jpg?v=1643083479" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-azul.jpg?v=1643083479" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-azul-claro.jpg?v=1643083480" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-cafe.jpg?v=1643083480" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-crema.jpg?v=1643083480" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-gris.jpg?v=1643083479" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-morado.jpg?v=1643083480" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-naranja.jpg?v=1643083480" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-negro.jpg?v=1643083479" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-pastel.jpg?v=1643083479" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-rojo.jpg?v=1643083479" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-rosa.jpg?v=1643083479" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-verde.jpg?v=1643083479" alt="" srcset="">
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0555/2766/9898/files/zafu-redondo-liso-vino.jpg?v=1643083480" alt="" srcset="">
+    </div>
+
+    <div class="sectionpzmDos">
+      <div class="pegajoso">
+        <h2>Diferentes colores que se adaptan a tu estilo</h2>
+        <br>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fas fa-truck"></i>
+        <br>
+        <br>
+          <p>Selecciona el color que más te guste y añádelo al carrito</p>
+          <div id='product-component-1643088587799'></div>
+        <br>
+        <h6>*Hecho en México por artesanos mexicanos.</h6>
+        <br><br>
+      </div>
+    </div>
+    
+  </section>
+  <br>
+  <hr>
+
+  <section class="sectionpzmTres">
+    <h2 style="font-size: 50px; color:#8E4091">¿Aún indeciso? Estos artículos relacionados podrían gustarte</h2>
+    <br>
+      <div id="padrePadre">
+        <!-- Todo Meditación -->
+        <% for(i=0; i < 4; i++) { %>
+          <div id="myBtn" class="padreArticulo">
+            <img loading="lazy" src="<%=meditacion[i].imagen%>" width="100%"> </img>
+            <h2><a href="/meditacion/<%=meditacion[i].url%>"><%=meditacion[i].titulo%></a></h2>
+            <p>$ <%=meditacion[i].precio%> mxn </p>
+          </div>
+          <% } %>
+      </div>
+  </section>
 
 
+<section class="sectionpzmCuatro">
+  <h2>Descubre la colección completa</h2>
+  <a href="/meditacion">
+    <button>Meditación</button>
+  </a>
+</section>
+
+
+
+  
     <footer>
       <%- include('../partials/footer.ejs') %>
     </footer>
 
 
-<!-- Inicia Scripts Zoom -->
-    <%- include('../resources/scriptZoom.ejs') %>
-<!-- Fin Scripts Zoom -->
-
-
 <!-- Shopify Producto -->
+<script type="text/javascript">
+  /*<![CDATA[*/
+  (function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
+    }
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
+    function ShopifyBuyInit() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'kaizencuatro.myshopify.com',
+        storefrontAccessToken: '4164ed056729419d3e24bb720d01c9a4',
+      });
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('product', {
+          id: '6750427938954',
+          node: document.getElementById('product-component-1643088587799'),
+          moneyFormat: '%24%20%7B%7Bamount%7D%7D',
+          options: {
+    "product": {
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "calc(25% - 20px)",
+            "margin-left": "20px",
+            "margin-bottom": "50px"
+          }
+        }
+      },
+      "contents": {
+        "img": false,
+        "title": false,
+        "price": false
+      },
+      "text": {
+        "button": "Añadir al carrito"
+      }
+    },
+    "productSet": {
+      "styles": {
+        "products": {
+          "@media (min-width: 601px)": {
+            "margin-left": "-20px"
+          }
+        }
+      }
+    },
+    "modalProduct": {
+      "contents": {
+        "img": false,
+        "imgWithCarousel": true,
+        "button": false,
+        "buttonWithQuantity": true
+      },
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "100%",
+            "margin-left": "0px",
+            "margin-bottom": "0px"
+          }
+        }
+      },
+      "text": {
+        "button": "Add to cart"
+      }
+    },
+    "option": {},
+    "cart": {
+      "text": {
+        "total": "Subtotal",
+        "button": "Checkout"
+      }
+    },
+    "toggle": {}
+  },
+        });
+      });
+    }
+  })();
+  /*]]>*/
+</script>
 
+
+<!-- Inicia bloque para slick carousel -->
+<%- include('../partials/articulosEfectos.ejs') %>
 
 </body>
 

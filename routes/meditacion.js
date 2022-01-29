@@ -326,7 +326,9 @@ const zafuViajesLiso = meditacion.find(zafuViajesLiso =>
 //Ruta para /meditacion/zafu-viajes-liso
 route.get('/zafu-viajes-liso', function (req, res) {
     res.render("pages/zafuViajesLiso",
-        { zafuViajesLiso: zafuViajesLiso })
+        { zafuViajesLiso: zafuViajesLiso,
+        zafuRedondoLisoConDiseno: zafuRedondoLisoConDiseno,
+        meditacion: mediitacion  })
 }
 );
 
