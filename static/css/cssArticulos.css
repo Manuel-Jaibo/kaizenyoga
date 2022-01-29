@@ -35,6 +35,11 @@ body button:hover{
   padding: 10px 0;
 }
 
+.area div img{
+  display: block;
+  margin: auto;
+}
+
 .caso img:hover{
   transform: scale(8);
   -webkit-transform: scale(8);
@@ -43,10 +48,7 @@ body button:hover{
   -o-transform: scale(8);
 }
 
-.area div img{
-  display: block;
-  margin: auto;
-}
+
 
 .multiple-items{
   padding: 10px 0;
