@@ -9,56 +9,77 @@
   box-sizing: border-box;
 }
 
-body {
+/* Inicia Datos Generales CSS PC */
+html {
   font-family: "Poppins", sans-serif;
   color: #000000;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: bold;
+  color: #564693;
+}
+
 h1 {
-  font-size: 45px;
+  font-size: 48px;
 }
 
-body h2 {
-  font-size: 40px;
+h2 {
+  font-size: 42px;
 }
 
-body h3 {
-  font-size: 30px;
+h3 {
+  font-size: 37px;
 }
 
-body h4 {
+h4 {
+  font-size: 34px;
+}
+
+h5 {
+  font-size: 31px;
+}
+
+h6{
+  font-size: 28px;
+}
+
+li {
+  list-style: none;
+}
+
+p,
+nav a,
+a,
+li,
+li a,
+a button,
+button a {
   font-size: 25px;
+  text-decoration: none;
 }
 
-body h5 {
-  font-size: 25px;
+a{
+  color: #8E4091;
 }
 
-body p {
-  font-size: 24px;
+a:hover{
+  color: #564693;
 }
 
-body nav a{
-  font-size: 23px;
-}
-
-body nav a:hover{
+/* nav a:hover{
   color: #8E4091;
   font-weight: bold;
-}
+} */
 
-body a,
-body li,
-li a {
-  font-size: 22px;
-  text-decoration: none;
-  color: #000000;
-}
-
-body button{
-  margin: 20px 0 30px 0;
+/* button{
+  padding: 20px 0 30px 0;
   border: none;
-  padding: 8px 30px;
   -webkit-box-shadow: 0 0 3px 2px #564693;
   box-shadow: 0 0 3px 2px #564693;
   cursor: pointer;
@@ -70,138 +91,163 @@ body button{
   background-color: #8E4091;
 }
 
-body button:hover{
+button:hover{
   background: transparent;
   padding: 8px 30px;
-}
+} */
 
-body a button{
-  font-size: 18px;
-  color: #ffffff;
-}
+/* Fin de Datos Generales CSS PC */
 
-body a button:hover{
-  font-size: 19px;
-  color: #000000;
-}
 
+
+/* Inicia Barra superior PC */
 .barraSuperior{
   text-align: center;
   color: #ffffffff;
-  padding: 10px;
   background-color: #564693;
-  margin-bottom: 20px;
 }
 
 .barraSuperior p{
   font-size: 15px;
+  padding: 0.8%;
 }
+/* Fin Barra superior PC */
 
-li {
-  list-style: none;
-}
 
+/* Inicia Header PC */
+/* Inicia Header Superior OC */
 header {
   width: 100%;
-}
-
-.navegacion{
-  display: flex;
-  align-items: center;
-  justify-content:space-around;
-}
-
-.subNavegacion{
-
-  width: 100%;
-  display: flex;
-  align-items: top;
-  justify-content:space-evenly;
-}
-
-.titulos-menu{
-  font-size: 20px !important;
-  font-weight: bold;
-  list-style: none;
-}
-
-.subNavegacion div h2{
-  font-size: 22px !important;
-  font-family: "Poppins", sans-serif;
-  font-weight: normal;
-  letter-spacing: 1px;
-}
-
-.fa, 
-.fas{
-  font-size: 17px;
-  font-weight: 200;
-  padding: 5px;
-}
-
-.clicMeditacion,
-.clicYoga{
-  cursor: pointer;
-  background-color: #ffffff;
-}
-
-.listaMeditacion,
-.listaYoga{
-  display: none;
-}
-
-.listaMeditacion{
-  background-color: red;
-  width: 100%;
-}
-
-/* .listaMeditacionDiv{
-  display: none;
   display: flex;
   justify-content: space-evenly;
-} */
-
-/* .listaMeditacionDiv div{
-  margin: 0 10px;
-} */
-
-/* .listaMeditacionDiv div:hover{
-  background-color: #eeeeee;
-} */
-
-.subNavegacion div ul li a{
-  font-size: 17px;
+  flex-wrap: wrap;
 }
 
-.listaMeditacion li,
-.listaYoga li{
-  list-style: circle;
-  list-style-position: inherit;
-  font-size: 13px;
+header div{
+  display: block;
+  margin: auto;
 }
 
-ul{
-    display: flex;
-    justify-content: center;
+.divNavegacion{
+  margin: 0;
+  width: 60%;
+  display: block;
 }
 
-ul li a{
-    margin: 0 10px;
-    letter-spacing: 1px;
+.navegacionSuperior,
+.navegacionInferior{
+  padding: 1% 2%;
 }
 
-ul li a:hover{
-  color: #8E4091;
+.navegacionSuperior ul{
+  display: flex;
+  justify-content: center;
 }
 
-.divIconos{
-    text-align: center;
-    font-size: 20px;
+.navegacionSuperior ul li{
+  padding: 1% 2%;
 }
 
-.divIconos *{
-    margin: 0 10px;
+
+/* Inicia Navegación Inferior para PC */
+.navegacionInferior{
+  border-top: 1px solid black;
+  margin: 0;
 }
+
+.navegacionInferior ul{
+  display: flex;
+}
+
+.fa, .fas{
+  font-size: 23px;
+}
+
+span{
+  padding-right: 5px;
+}
+
+.itemsMeditacion{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.itemsMeditacion div{
+  padding: 3% 10%;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.itemsMeditacion div:hover{
+  transition: ease-in 100ms;
+  -webkit-transition: ease-in 100ms;
+  -moz-transition: ease-in 100ms;
+  -ms-transition: ease-in 100ms;
+  -o-transition: ease-in 100ms;
+  /* transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1); */
+  cursor: pointer;
+}
+
+.itemsMeditacion div li{
+  font-size: 19px;
+}
+
+.itemsMeditacion div li span{
+  font-size: 8px !important;
+}
+
+.itemsMeditacion div img{
+  display: block;
+  margin: auto;
+}
+
+.liMeditacion{
+  cursor: pointer;
+}
+
+.itemsMeditacion,
+.itemsZafu,
+.itemsBancosDeMadera,
+.itemsTapetes{
+  display: none;
+}
+
+.itemsZafu{
+  background-color: #8e4091bc;
+  padding: 0 !important;
+  width: 250px !important;
+  position: absolute;
+  z-index: 2;
+}
+
+.itemsZafu ul{
+  display: block;
+  padding: 0;
+}
+
+.itemsZafu ul div{
+  display: flex;
+  margin: 0;
+  padding: 1%;
+}
+
+.itemsZafu ul div:hover{
+  background-color: #8E4091;
+}
+
+.itemsZafu ul div li a{
+  font-size: 18px;
+  color: #ffffff;
+}
+/* Fin Navegación Inferior para PC */
+
+
 
 footer{
   padding: 2%;
@@ -237,21 +283,3 @@ footer div{
   padding: 0 3%;
 }
 
-
-
-
-
-
-/* Nuevo menú del 29 enero */
-.imagen-titulo *{
-  display: block;
-}
-
-.listaMeditacionDiv{
-  background-color: purple;
-  display: none;
-}
-
-.listaMeditacionDiv:hover{
-  display: flex;
-}
